@@ -119,7 +119,6 @@ output {
   display: block;
   width: 100%;
   padding: $padding-base-vertical $padding-base-horizontal;
-  font-size: $font-size-base;
   line-height: $line-height-base;
   color: $input-color;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -132,49 +131,25 @@ output {
   //box-shadow: inset 0.1px 2px 5px rgba(89, 132, 154, 0.13);
 
   background-color: white;
-  border: 1px solid #dadada;
-  border-radius: 4px;
-  //box-shadow: inset 0.1px 1px 3px rgba(0, 0, 0, 0.3);
+  border: 1px solid #b2b2b2;
+  border-radius: 26px;
+  box-shadow: inset 0 3px 0 #dfdfdf;
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus(#ef9c00);
+  @include form-control-focus(#d83622);
   font-size: 15px;
   font-weight: 400;
 
   &:focus{
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15);
   }
 
   // Placeholder
-  @include placeholder(#949494);
+  @include placeholder(#4c4c4c);
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
     border: 0;
     background-color: transparent;
-  }
-
-  &_border-bottom{
-    color: inherit;
-    @include placeholder(currentColor);
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid currentColor;
-    border-radius: 0;
-    padding: 7px 0;
-    &:focus{
-      box-shadow: none;
-    }
-  }
-  &_border{
-    color: inherit;
-    background-color: transparent;
-    border: 2px solid currentColor;
-    @include placeholder(currentColor);
-    border-radius: 0;
-    &:focus{
-      box-shadow: none;
-    }
   }
 
   // Disabled and read-only inputs
@@ -257,7 +232,7 @@ input[type="search"] {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: $form-group-margin-bottom;
+  margin-bottom: 12px;
   position: relative;
 
   &.two{

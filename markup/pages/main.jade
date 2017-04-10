@@ -36,6 +36,18 @@ html(class="no-js", lang="ru")
 
             .page__buffer
         .page__footer
+
+            if(!trust)
+                .container
+                    p.h2 Нам доверяют:
+                    .trust-list.not-styleLink
+                        -for(var a = 1; a<9; a++)
+                            -for(var i = 1; i<9; i++)
+                                .trust-list__section
+                                    a(href="#").trust-list__item: +img('content/trust-list/'+i, 'png')
+                    br
+                    br.hidden-xs-down
+
             +footer()
 
         +modal()

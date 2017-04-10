@@ -46,8 +46,47 @@ if ($.fn.slick) {
         slidesToScroll: 1,
         dots: false,
         arrows: true,
+        prevArrow: "<button class='slick-prev slick-arrow'></button>",
+        nextArrow: "<button class='slick-next slick-arrow'></button>",
+    });
+    $('.reviews-block__documents').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: false,
+        arrows: true,
+        prevArrow: "<button class='slick-prev slick-arrow'></button>",
+        nextArrow: "<button class='slick-next slick-arrow'></button>",
+    });
+    $('.trust-list').slick({
+        slidesToShow: 8,
+        slidesToScroll: 8,
+        dots: false,
+        arrows: true,
         prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
         nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 6,
+                }
+            },
+            {
+                breakpoint: 614,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 388,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
     });
 //
 //     var itemDetaliSlider = $('.item-detali-slider-view');

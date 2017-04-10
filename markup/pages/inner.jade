@@ -1,7 +1,7 @@
 extends main
 
 block head
-    - var headData = {title: "Главная"}
+    - var headData = {title: "типовая"}
 
 block content
 
@@ -14,8 +14,69 @@ block content
         .slider-inner.arrow-default
             - for(var i = 0; i<3; i++)
                 .slider-inner__section: +img('content/slider-inner/1')
+        br
+        br
+        blockquote
+            p В ходе проведения строительства, ремонтных работ немалого внимания требует подбор строительных материалов. С современным ассортиментом всерьез возникает опасность утонуть в море информации, подбирая материалы. Множество марок, разнообразное качество, каждый вид материалов может быть представлен в большом разнообразии. И для того чтобы с ним ознакомиться, придется посещать множество магазинов, которые могут располагаться в разных районах. Для того чтобы упростить поиск, резоннее обратиться в интернет-магазин строительных материалов, ассортимент которого сможет удовлетворить любого покупателя.
 
+        h2 Наши преимущества:
+        .row
+            .col-lg-3
+                ul
+                    li Маркированный список
+                    li Маркированный список
+                    li Маркированный список
+                    li Маркированный список
+                    li Маркированный список
+            .col-lg-4
+                ol
+                    li Нумерованный список
+                    li Нумерованный список
+                    li Нумерованный список
+                    li Нумерованный список
+                    li Нумерованный список
+    br
+    br
+    .reviews-block
+        .container
+            p.reviews-block__title.text-center Отзывы и пожелания
+            .row
+                .col-lg-6
+                    p.reviews-block__title-sub Видео отзывы клиентов:
+                    .reviews-block__video
+                        - for(var i = 1; i<5; i++)
+                            .reviews-block__video-section
+                                .reviews-block__video-item: .reviews-block__video-item-after(style="background-image: url('%=static=%img/content/reviews-block__video/"+i+".jpg');")
 
+                .col-lg-6
+                    br.hidden-lg-up
+                    .reviews-block__rightBlock
+                        p.reviews-block__title-sub Письма благодарности:
+                        .reviews-block__documents.arrow-default
+                            - for(var i = 1; i<4; i++)
+                                .reviews-block__documents-section
+                                    .reviews-block__documents-item: +img('content/reviews-block__documents/1')
+    .container
+        br
+        br
+        .reviews-list
+            .reviews-list-item
+                p.reviews-list-item-date 14.10.2016  /  12:50
+                p.reviews-list-item-title Павел Владимирович
+                p.reviews-list-item-text Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Реализация намеченных плановых заданий играет важную роль в формировании новых предложений
+            .reviews-list-item
+                p.reviews-list-item-date 14.10.2016  /  12:50
+                p.reviews-list-item-title Павел Владимирович
+                p.reviews-list-item-text Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Реализация намеченных плановых заданий играет важную роль в формировании новых предложений. Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Реализация намеченных плановых заданий играет важную роль в формировании новых предложений
+
+            ul.pagination.not-styleLink
+                li.active: span 1
+                - for(var i = 2; i<6; i++)
+                    li: a(href='#'): span= i
+            br
+            button.btn.btn-red.btn-bg Добавить свой отзыв
+
+        hr
 
 block script
     script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")

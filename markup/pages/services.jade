@@ -1,0 +1,100 @@
+extends main
+
+block head
+    - var headData = {title: "Наши услуги"}
+
+block content
+    .container
+        h1.text-center Наши услуги
+        .services-list.not-styleLink
+            a(href="#").services-list__item
+                span.services-list__item-img: +img('content/services/1', 'png')
+                span.services-list__item-title: span Проектирование #[br]и дизайн
+            a(href="#").services-list__item
+                span.services-list__item-img: +img('content/services/2', 'png')
+                span.services-list__item-title: span Готовые #[br]проекты домов
+            a(href="#").services-list__item
+                span.services-list__item-img: +img('content/services/3', 'png')
+                span.services-list__item-title: span Монтаж кровель
+            a(href="#").services-list__item
+                span.services-list__item-img: +img('content/services/4', 'png')
+                span.services-list__item-title: span Фасадные работы
+            a(href="#").services-list__item
+                span.services-list__item-img: +img('content/services/5', 'png')
+                span.services-list__item-title: span Отделочные работы
+            a(href="#").services-list__item
+                span.services-list__item-img: +img('content/services/6', 'png')
+                span.services-list__item-title: span Монтаж #[br]металлоконструкций
+            a(href="#").services-list__item
+                span.services-list__item-img: +img('content/services/7', 'png')
+                span.services-list__item-title: span Благоустройство #[br]и асфальтирование
+            a(href="#").services-list__item
+                span.services-list__item-img: +img('content/services/8', 'png')
+                span.services-list__item-title: span Укладка тротуарной #[br]плитки
+            a(href="#").services-list__item
+                span.services-list__item-img: +img('content/services/9', 'png')
+                span.services-list__item-title: span Строительные работы
+
+        br
+        br
+        br
+
+    .sms-discount
+        .container
+            p.sms-discount__title.text-center Проверьте свою удачу!
+                br
+                |Получите SMSскидку от 5% до 12% прямо сейчас
+
+            .sms-discount__table
+                .sms-discount__table-cell.sms-discount__table-cell_text.
+                    «Испытайте свою удачу! Оставьте номер своего телефона, #[br.hidden-xs-down] чтобы узнать размер своей персональной скидки! #[br.hidden-xs-down] На ваш телефон придет SMS-купон на скидку при покупке #[br.hidden-xs-down] профнастила, которая может составить от #[b.color-red 5%] до #[b.color-red 12%] #[br.hidden-xs-down] от актуальной цены материала. Размер персональной скидки #[br.hidden-xs-down] назначается случайно.
+                .sms-discount__table-cell.sms-discount__table-cell_phone
+                    +img('content/sms-discount-phone', 'png')
+                .sms-discount__table-cell.sms-discount__table-cell_top
+                    form.sms-discount__form
+                        .form-group
+                            input.form-control(placeholder="Ваш телефон")
+                        button.btn.btn-red.btn-bg.btn-width.btn-md ПОЛУЧИТЬ СКИДКУ
+
+    br
+    br
+
+
+block script
+    script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
