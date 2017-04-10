@@ -51,11 +51,10 @@ a{
 
 h1, .h1{
   margin-bottom: 30px;
-  font-size: 50px;
-  line-height: normal;
-  color: #4f4f4f;
-  font-family: GothamPro, sans-serif;
+  color: #b43520;
+  font-size: 27px;
   font-weight: 700;
+  line-height: 37px;
   &:first-child{
     margin-top: 0;
   }
@@ -398,8 +397,75 @@ table{
   }
 }
 
+.link-icon{
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4px;
+  color: currentColor;
+  >*{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px;
+  }
+  &__icon{
+    margin-top: -3px;
+  }
+  &__title{
+    &-link{
+      color: currentColor;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 32px;
+    }
+  }
+}
+
+.network{
+  @include nl;
+  font-size: 0;
+  margin: -4.5px;
+  li{
+    display: inline-block;
+    font-size: 14px;
+    a{
+      display: block;
+      padding: 4.5px;
+    }
+  }
+}
+
+.arrow-default{
+  .slick-arrow{
+    @include btn-clear;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    padding: 0 33px;
+    &:after{
+      content: '';
+      display: inline-block;
+    }
+    &:hover{
+      color: #d83622;
+    }
+    &.slick-prev{
+      left: 0;
+      &:after{
+        @include triangle('left', currentColor, 15px, 30px);
+      }
+    }
+    &.slick-next{
+      right: 0;
+      &:after{
+        @include triangle('right', currentColor, 15px, 30px);
+      }
+    }
+  }
+}
 
 
-
+@include text-border-bottom('white', #fff);
+@include text-border-bottom('blue', #3a5072);
 
 

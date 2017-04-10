@@ -1,5 +1,73 @@
 mixin header(data)
     .header(class!=data).not-styleLink
+        .header__desktop.hidden-md-down
+            .header__top
+                .container
+                    .header__top-table
+                        .header__top-table-left
+                            a(href="#").header__logo: +img('assets/header/logo', 'png')
+                        .header__top-table-right
+                            .header__nav
+                                ul
+                                    li: a(href="#").color-white: span.color-white__title Главная страница
+                                    li: a(href="#").color-white: span.color-white__title О компании
+                                    li: a(href="#").color-white: span.color-white__title Каталог продукции
+                                    li: a(href="#").color-white: span.color-white__title Услуги
+                                    li: a(href="#").color-white: span.color-white__title Наши объекты
+                                    li: a(href="#").color-white: span.color-white__title Контакты
+
+                            .header__top-container
+                                .header__top-container-search
+                                    div.header__top-container-search-linksListBlock
+                                        .header__top-container-search-linksList
+                                            div
+                                                a(href="#").link-icon.color-white
+                                                    span.link-icon__icon: i.s-email
+                                                    span.link-icon__title: span.color-white__title_viewBorder.color-white__title 2383886@mail.ru
+                                                br
+                                                span.link-icon
+                                                    span.link-icon__icon: i.s-date
+                                                    span.link-icon__title пн-сб: 09:00 - 19:00
+
+                                            div
+                                                .link-icon
+                                                    .link-icon__icon: i.s-phone
+                                                    .link-icon__title
+                                                        a(href="#").link-icon__title-link.color-white: span.color-white__title +7 (351) 777-47-08
+                                                        br
+                                                        a(href="#").link-icon__title-link.color-white: span.color-white__title +7 (351) 238-38-86
+                                    .header__search
+                                        input(placeholder="Поиск по сайту").header__search-input
+                                        button.header__search-btn ПОИСК
+
+
+                                .header__top-container-btn
+                                    button.header__top-btn
+                                        span.header__top-btn-icon: i.s-advice
+                                        span.header__top-btn-title ЗАКАЗАТЬ ЗВОНОК
+                                    button.header__top-btn
+                                        span.header__top-btn-icon: i.s-profile
+                                        span.header__top-btn-title РАСЧЁТ МАТЕРИАЛА
+            .header__bottom
+                .container
+                    .header__category
+                        - var listCatNav = []
+                        .header__category-list
+                            -for(var i = 0; i<2; i++)
+                                each categoryRow, key in header.categoryList
+                                    - listCatNav[key] = categoryRow.listNav
+                                    .header__category-list-section
+                                        a(href="#", data-block="#navList-"+key).header__category-item
+                                            span.header__category-item-img(class=categoryRow.imgClassName)
+                                                span.header__category-item-img-default: +img('content/category-list/'+categoryRow.imgName, 'png')
+                                                span.header__category-item-img-hover: +img('content/category-list/'+categoryRow.imgName+'-hover', 'png')
+                                            span.header__category-item-title!= categoryRow.title
+
+                        each navList, key in listCatNav
+                            .header__category-nav(id='navList-'+key)
+                                ul
+                                    each navListRow in navList
+                                        li: a(href="#").color-blue: span.color-blue__title= navListRow
 
 
 

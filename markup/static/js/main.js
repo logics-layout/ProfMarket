@@ -41,17 +41,13 @@ if ($.fn.slick) {
 //     }).on('afterChange', checkBg);
 //     checkBg();
 //
-    $('.header__slider-el').slick({
+    $('.slider-inner').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: true,
+        dots: false,
         arrows: true,
-        prevArrow: $('.header__slider .slick-prev'),
-        nextArrow: $('.header__slider .slick-next'),
-        appendDots: $('.header__sliderDots')
-        // autoplay: true,
-        // autoplaySpeed: 3000,
-        // adaptiveHeight: true,
+        prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
     });
 //
 //     var itemDetaliSlider = $('.item-detali-slider-view');
@@ -74,8 +70,8 @@ if ($.fn.slick) {
 //         ]
 //         // autoplay: true,
 //         // autoplaySpeed: 3000,
-        // prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
-        // nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
+//         prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
+//         nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
 //     });
 //
 //     itemDetaliSliderPreview.slick({

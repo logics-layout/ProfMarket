@@ -1,3 +1,137 @@
 .footer{
+  background-color: #003d79;
+  color: #fff;
+  padding: 36px 0;
+  hr{
+    border-color: #fff;
+    margin: 35px 0;
+  }
+  &__certificates{
+    margin: 0 -28px;
+    &-section{
+      padding: 0 28px;
+      outline: none;
+      img{
+        width: 100%;
+      }
+    }
+    .slick-arrow{
+      @include btn-clear;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      z-index: 2;
+      &:after{
+        content: '';
+        display: inline-block;
+      }
+      &:hover{
+        color: #d83622;
+      }
+      &.slick-prev{
+        right: 100%;
+        padding-right: 15px;
+        &:after{
+          @include triangle('left', currentColor, 15px, 30px);
+        }
+      }
+      &.slick-next{
+        left: 100%;
+        padding-left: 15px;
+        &:after{
+          @include triangle('right', currentColor, 15px, 30px);
+        }
+      }
+    }
+  }
+  &__title{
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+  &__branches{
+    &-list{
+      font-size: 0;
+      margin: 0 -15px;
+      &-section{
+        display: inline-block;
+        font-size: 16px;
+        width: 33.33%;
+        padding: 0 15px;
+      }
+    }
+    &-item{
+      @include nl;
+      margin: 0 -6px;
+      li{
+        display: block;
+        padding: 3.5px 0;
+        a{
+          display: inline-block;
+          color: white;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: normal;
+          padding: 3px 6px;
 
+          &:hover{
+            color: #045da6;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &__descIcon{
+    font-size: 0;
+    margin: -5px -15px;
+    margin-top: -1px;
+    &-section{
+      font-size: 16px;
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      padding: 5px 15px;
+    }
+    &-item{
+      display: table;
+      >*{
+        display: table-cell;
+        vertical-align: top;
+        +*{
+          padding-left: 15px;
+        }
+      }
+      &-icon{
+        padding-top: 7px;
+        .s-phone-red{
+          margin-top: -5px;
+        }
+      }
+      &-desc{
+        p{
+          margin-bottom: 10px;
+        }
+        &-link{
+          font-size: 24px;
+          font-weight: 700;
+          display: block;
+          line-height: 35px;
+          +.footer__descIcon-item-desc-link{
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+  &__table{
+    display: table;
+    width: 100%;
+    &-cell{
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
 }

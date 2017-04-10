@@ -1,5 +1,295 @@
 .header{
+  &__top{
+    background-size: cover;
+    background-position: center;
+    background-image: url('%=static=%assets/header/top-bg.jpg');
+    //height: 196px;
+    overflow: hidden;
+    color: #fff;
+    &-table{
+      display: table;
+      width: 100%;
+      >*{
+        display: table-cell;
+        vertical-align: top;
+      }
+      &-left{
+        width: 209px;
+      }
+      &-right{
+      }
+    }
+    &-container{
+      width: 735px;
+      max-width: 100%;
+      display: table;
+      padding: 14px 0;
+      >*{
+        display: table-cell;
+        vertical-align: top;
+        +*{
+          padding-left: 29px;
+        }
+      }
+      &-btn{
+        width: 249px;
+        padding-top: 10px;
+      }
+      &-search{
+        &-linksList{
+          //padding: 0 29px;
+          font-size: 0;
+          margin: -10px -25px;
+          line-height: 32px;
+          display: inline-block;
+          text-align: left;
+          >*{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            padding: 10px 25px;
+          }
+        }
+        &-linksListBlock{
+          text-align: center;
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &-btn{
+      @include btn-clear;
+      color: currentColor;
+      text-align: center;
+      //line-height: 44px;
+      display: block;
+      width: 100%;
+      height: 44px;
+      border: 1px solid white;
+      border-radius: 4px;
+      +.header__top-btn{
+        margin-top: 18px;
+      }
+      >span{
+        display: inline-block;
+        vertical-align: middle;
+        +span{
+          padding-left: 15px;
+        }
+      }
+      &-icon{
+        margin-top: -4px;
+      }
+      &-title{
+        font-size: 13px;
+        font-weight: 700;
+      }
+    }
+  }
+  &__nav{
+    position: relative;
+    width: 752px;
+    padding-left: 8px;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 400%;
+      background-color: rgba(4, 68, 118, 0.66);
+      border-radius: 0 0 0 2px;
+      background-position: top left;
+      background-image: url('%=static=%assets/header/bg-nav-top.png');
+      background-repeat: repeat-x;
+    }
+    ul{
+      @include nl;
+      display: table;
+      width: 100%;
+      li{
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        padding: 0 10px;
+        +li{
+          &:before{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 15px;
+            background-color: #326b9c;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-left: -.5px;
+            margin-top: -7.5px;
+          }
+        }
+        a{
+          display: block;
+          color: white;
+          font-size: 15px;
+          line-height: 52px;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__logo{
+    display: block;
+    margin-bottom: -31px;
+    margin-left: -44px;
+    margin-right: -19px;
+  }
+  &__search{
+    position: relative;
+    font-size: 15px;
+    &-input{
+      width: 100%;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      background-image: url('%=static=%general/elements/header__search-input.png');
+      height: 40px;
+      padding-left: 15px;
+      padding-right: 117px;
+      color: #4c4c4c;
+      @include placeholder(#4c4c4c);
+    }
+    &-btn{
+      @include btn-clear;
+      font-size: 13px;
+      font-weight: 700;
+      position: absolute;
+      right: -1px;
+      top: 0;
+      height: 100%;
+      background-image: url('%=static=%general/elements/header__search-btn.png');
+      width: 83px;
+      padding-top: 2px;
+      &:before{
+        content: '';
+        display: inline-block;
+        @include bg($search);
+        right: 100%;
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        margin-right: 8px;
+      }
+    }
+  }
+  &__bottom{
+    //height: 82px;
+    background-color: #eee;
+    background-image: url('%=static=%assets/header/bg-bottom.png');
+    background-size: auto 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  &__category{
+    position: relative;
+    &-nav{
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -10px;
+      right: -10px;
+      background-color: #cfe9f7;
+      color: #3a5072;
+      border-radius: 10px;
+      box-shadow: 7px 4px 5px rgba(0, 0, 0, 0.32);
+      line-height: 19px;
+      padding: 13px 13px;
+      z-index: 9;
+      ul{
+        @include nl;
+        display: table;
+        width: 100%;
+        text-align: center;
+        li{
+          display: table-cell;
+          vertical-align: middle;
+          +li{
+            border-left: 1px solid #fff;
+          }
+          a{
+            color: currentColor;
+            padding: 0 15px;
+            display: block;
+          }
+        }
+      }
+    }
+    &-list{
+      text-align: center;
+      .slick-arrow{
+        @include btn-clear;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        z-index: 2;
+        //padding: 0 30px;
+        &.slick-prev{
+          right: 100%;
+          padding-right: 30px;
+        }
+        &.slick-next{
+          left: 100%;
+          padding-left: 30px;
+        }
+      }
+      &-section{
 
+      }
+    }
+    &-item{
+      height: 77px;
+      color: white;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 17px;
+      display: table;
+      margin: 0 auto;
+      text-align: center;
+      padding: 5px 9px;
+      border-radius: 10px 10px 0 0;
+      &:not(.active){
+        .header__category-item-img-hover{
+          display: none;
+        }
+      }
+      &.active{
+        background-color: #cfe9f7;
+        color: #3a5072;
+        box-shadow: 7px 4px 5px rgba(0, 0, 0, 0.32);
+        .header__category-item-img-default{
+          display: none;
+        }
+      }
+
+      >span{
+        display: block;
+      }
+      &-img{
+        //margin-bottom: 8px;
+        height: 32px;
+        line-height: 32px;
+        img{
+          display: inline-block;
+          vertical-align: middle;
+        }
+        &_big{
+          height: 40px;
+        }
+      }
+      &-title{
+
+      }
+    }
+  }
 }
 
 

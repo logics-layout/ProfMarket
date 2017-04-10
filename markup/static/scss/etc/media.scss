@@ -5,6 +5,44 @@ body, html{
   min-width: 320px;
 }
 
+@include my-media-query(max, 1265px) {
+  .header {
+    &__category {
+      &-list {
+        .slick-arrow {
+          &.slick-prev {
+            right: auto;
+            left: -15px;
+            padding-right: 0;
+          }
+          &.slick-next {
+            left: auto;
+            right: -15px;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    &__certificates {
+      .slick-arrow {
+        color: #d83622;
+        &.slick-prev {
+          right: auto;
+          left: 5px;
+          padding-right: 0;
+        }
+        &.slick-next {
+          left: auto;
+          right: 5px;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
 
 }
@@ -34,9 +72,43 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  html, body {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .footer {
+    &__certificates {
+      margin: 0 -15px;
+      &-section {
+        padding: 0 15px;
+      }
+    }
+  }
+}
 
+@include my-media-query(max, 600px) {
+  .footer{
+    &__descIcon{
+      &-section{
+        width: 100%;
+      }
+      &-item {
+        &-desc {
+          &-link {
+            //font-size: 19px;
+            //line-height: 26px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
-
+  .footer__table{
+    text-align: center;
+  }
+  html, body {
+    font-size: 14px;
+  }
 }

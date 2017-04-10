@@ -1,6 +1,69 @@
 mixin footer(data)
     footer.footer.not-styleLink
         .container
+            .footer__certificates
+                -for(var o = 0; o<12;o++)
+                    .footer__certificates-section: +img('assets/footer/certificates')
+            hr
+            .row
+                .col-lg-5
+                    p.footer__title Наши филиалы:
+                    .footer__branches-list
+                        .footer__branches-list-section
+                            ul.footer__branches-item
+                                li: a(href="#") Челябинск
+                                li: a(href="#") Миасс
+                                li: a(href="#") Сатка
+                                li: a(href="#") Еманжелинск
+                        .footer__branches-list-section
+                            ul.footer__branches-item
+                                li: a(href="#") Озёрск
+                                li: a(href="#") Южноуральск
+                                li: a(href="#") Чебаркуль
+                                li: a(href="#") Кыштым
+                        .footer__branches-list-section
+                            ul.footer__branches-item
+                                li: a(href="#") Копейск
+                                li: a(href="#") Троицк
+                                li: a(href="#") Пласт
+                                li: a(href="#") Златоуст
+                .col-lg-7
+                    br.hidden-lg-up
+                    p.footer__title Контакты:
+
+                    .footer__descIcon
+                        .footer__descIcon-section
+                            .footer__descIcon-item
+                                .footer__descIcon-item-icon: i.s-label
+                                .footer__descIcon-item-desc
+                                    p ООО "Профмаркет" г. Челябинск,
+                                        br
+                                        |ул. Российская 67, оф. 107
+                                    a(href="#").color-white: span.color-white__title.color-white__title_viewBorder 2383886@mail.ru
+
+                        .footer__descIcon-section
+                            .footer__descIcon-item
+                                .footer__descIcon-item-icon: i.s-phone-red
+                                .footer__descIcon-item-desc
+                                    a(href="#").footer__descIcon-item-desc-link.color-white: span.color-white__title +7 (351) 777-47-08
+                                    a(href="#").footer__descIcon-item-desc-link.color-white: span.color-white__title +7 (351) 238-38-86
+            hr
+
+            .footer__table
+                .footer__table-cell
+                    +img('assets/footer/logo', 'png')
+                    span.hidden-md-down &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    br.hidden-lg-up
+                    span Сopyright 2016 Все права защищены
+                .footer__table-cell
+                    .text-right
+                        ul.network
+                            li: a(href="#"): i.s-vk
+                            li: a(href="#"): i.s-fs
+                            li: a(href="#"): i.s-tw
+                            li: a(href="#"): i.s-gl
+
+
 
 
 
