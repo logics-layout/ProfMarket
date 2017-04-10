@@ -96,8 +96,8 @@ p {
 hr{
   border-color: #e6e6e6;
   margin: 55px 0;
-  &.two{
-    margin: 25px 0;
+  &.hr-two{
+    margin: 20px 0;
   }
 }
 
@@ -438,9 +438,79 @@ table{
   }
 }
 
+.tabs{
+  &__title{
+    color: #4b4b4b;
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    margin-bottom: 7px;
+  }
+  &__nav{
+    @include nl;
+    font-size: 0;
+    display: inline-block;
+    li{
+      display: inline-block;
+      &.active{
+        a{
+          background-color: #db4c3b;
+          color: white;
+          cursor: default;
+          span{
+            border-bottom-color: transparent;
+          }
+          &:hover{
+            span{
+              border-bottom-color: transparent;
+            }
+          }
+        }
+      }
+      a{
+        display: block;
+        color: #212121;
+        line-height: normal;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 9px 25px;
+        border-radius: 26px;
+        @include tr;
+        span{
+          border-bottom: 1px dashed rgba(33, 33, 33, 0.3);
+        }
+        &:hover{
+          span{
+            border-bottom-color: rgba(33, 33, 33, 0.6);
+          }
+        }
+      }
+    }
+    &_sm{
+      li {
+        a {
+          padding: 21px 47px;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+  &__content{
+    &-item{
+      &:not(.active){
+        display: none;
+      }
+    }
+  }
+}
+
 
 @include text-border-bottom('white', #fff);
 @include text-border-bottom('blue', #3a5072);
 @include text-border-bottom('red', #b43520);
+@include text-border-bottom('black', #333);
 
 

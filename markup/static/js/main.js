@@ -236,3 +236,53 @@ if ($.fn.magnificPopup) {
 //         videoBlockIframe.attr('src', iframe.attr('src'));
 //     }
 // });
+
+function initYmaps() {
+    var coords = [52.32594308927015, 104.2421168088913];
+    var MapPlaces = new ymaps.Map('yamap', {
+        center: coords,
+        zoom: 12,
+        controls: ['zoomControl']
+    });
+    MapPlaces.behaviors.disable('scrollZoom');
+
+    collection = new ymaps.GeoObjectCollection(null,{
+        iconLayout: 'default#image',
+        iconImageHref: 'placemark.png',
+        iconImageSize: [23, 35],
+        // iconImageOffset: [-31, -83]
+    });
+
+    MapPlaces.geoObjects.add(collection);
+
+    placemark = new ymaps.Placemark(coords);
+    collection.add(placemark);
+}
+
+try{
+    ymaps.ready(initYmaps);
+}catch (e){}
+
+$('.tabs__nav').find('a').click(function(e){
+    e.preventDefault();
+    var _this = $(this),
+        parent = _this.parent(),
+        className = 'active',
+        block = $(_this.attr('data-block')),
+        time = 300;
+
+    if(!parent.hasClass(className)){
+        parent.addClass(className);
+    }
+    parent.siblings().removeClass(className)
+        .each(function () {
+            var __this = $(this),
+                link = __this.find('a'),
+                block = $(link.attr('data-block'));
+            if(block[0]){
+                block.fadeOut(time)
+            }
+        });
+
+    block.delay(time).fadeIn(time)
+});

@@ -1,0 +1,100 @@
+extends main
+
+block head
+    - var headData = {title: "Контакты"}
+
+block content
+    .container
+        h1.text-center Контакты
+        span.tabs__title Выберите город:
+        |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ul.tabs__nav.not-styleLink
+            li.active: a(href="#", data-block="#items1"): span Челябинск
+            li: a(href="#", data-block="#items2"): span Еманжелинск
+            li: a(href="#", data-block="#items3"): span Копейск
+        hr.hr-two
+        .tabs__content
+            .tabs__content-item.active#items1
+                .contacts__table.not-styleLink
+                    .contacts__table-cell
+                        .row
+                            .col-sm-6
+                                p 454006 г. Челябинск, #[br]ул. Российская 67,  оф. 107
+                            .col-sm-6
+                                p Время работы: #[br] Пн-сб: 09:00 - 19:00
+                        .row
+                            .col-sm-6
+                                p
+                                    a(href="#").color-black: span.color-black__title +7 (351) 777-47-08
+                                    br
+                                    a(href="#").color-black: span.color-black__title +7 (351) 238-38-86
+
+                            .col-sm-6
+                                a(href="#").color-black: span.color-black__title 2383886@mail.ru
+                        .row
+                            .col-sm-6
+                                p.
+                                    ИНН 7453240660 #[br] КПП745301001 #[br] ОГРН 1127453003028
+                        br
+                        .contacts__listBtn
+                            .contacts__listBtn-section
+                                a(href="#").contacts__listBtn-item: span Оставить #[br.hidden-sm-down] заявку
+                            .contacts__listBtn-section
+                                a(href="#").contacts__listBtn-item: span Написать #[br.hidden-sm-down] директору
+                            .contacts__listBtn-section
+                                a(href="#").contacts__listBtn-item: span Предложение #[br.hidden-sm-down] о сотрудничестве
+
+
+                    .contacts__table-cell.contacts__table-cell_widget
+                        br.hidden-lg-up
+                        +img('content/widget')
+
+            .tabs__content-item#items2
+                p o
+            .tabs__content-item#items3
+                p ы
+
+    br
+    #yamap
+    br
+    br
+
+
+block script
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

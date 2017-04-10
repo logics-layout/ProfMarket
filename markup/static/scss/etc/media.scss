@@ -59,12 +59,37 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+  .contacts__table-cell_widget {
+    width: 440px;
+  }
+  .contacts__table {
+    &-cell {
+      &:not(:last-child) {
+        padding-right: 20px;
+      }
+    }
+  }
+
   .sms-discount__table-cell_phone {
     width: 200px;
   }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .contacts {
+    &__table {
+      display: block;
+      &-cell {
+        display: block;
+        &:not(:last-child) {
+          padding-right: 0;
+        }
+        &_widget{
+          width: 100%;
+        }
+      }
+    }
+  }
   .sms-discount {
     &__title {
       font-size: 30px;
@@ -144,6 +169,26 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  #yamap{
+    height: 400px;
+  }
+  .tabs {
+    &__nav {
+      li {
+        a {
+          font-size: 14px;
+          padding: 6px 15px;
+        }
+      }
+    }
+  }
+  .contacts {
+    &__listBtn {
+      &-section {
+        width: 100%;
+      }
+    }
+  }
   .services-list {
     &__item {
       width: 50%;
@@ -215,6 +260,9 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  #yamap{
+    height: 300px;
+  }
   .sms-discount__title {
     font-size: 22px;
     line-height: 32px;

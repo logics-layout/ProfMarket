@@ -301,6 +301,61 @@ body {
   }
 }
 
+.contacts{
+  &__table{
+    display: table;
+    width: 100%;
+    &-cell{
+      display: table-cell;
+      vertical-align: middle;
+      &:not(:last-child){
+        padding-right: 49px;
+      }
+      &_widget{
+        width: 585px;
+        >img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__listBtn{
+    font-size: 0;
+    margin: -8px;
+    clear: both;
+    &-section{
+      padding: 8px;
+      width: 33.33%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    &-item{
+      color: #333;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+      display: block;
+      >span{
+        display: block;
+        padding: 7px 10px;
+        border: 1px solid #333;
+        border-radius: 14px;
+        line-height: 20px;
+      }
+      &:hover{
+        >span{
+          background-color: #333;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+#yamap{
+  height: 551px;
+  background-color: #e6e6e6;
+}
 
 
 
