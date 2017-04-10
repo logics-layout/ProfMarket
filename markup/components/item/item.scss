@@ -1,3 +1,80 @@
 .item{
-  
+  text-align: center;
+  font-size: 13px;
+  line-height: normal;
+  border: 1px solid #ededed;
+  display: block;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.26);
+  color: #333;
+  padding-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 16px;
+
+  &__after{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 16px solid;
+    border-left: 170px solid transparent;
+    border-right: 170px solid transparent;
+  }
+
+  &__img{
+    height: 180px;
+    line-height: 180px;
+    padding: 0 10px;
+    img{
+      display: inline-block;
+      max-height: 100%;
+    }
+  }
+  &__btn{
+    margin-top: 15px;
+  }
+  &__price{
+    padding-top: 8px;
+  }
+  b{
+    color: #d83622;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  &__title{
+    color: #1864b0;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  &__footer{
+    border-top: 1px dashed #cbcbcb;
+    &_notBorder{
+      padding-top: 5px;
+      margin-top: 5px;
+      border-top: none;
+    }
+  }
+}
+
+.itemList{
+  margin: -10px -15px;
+  font-size: 0;
+  .slick-list{
+    padding-bottom: 6px;
+  }
+  &__section{
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px 15px;
+    width: 25%;
+    outline: none;
+    &_widthAuto{
+      width: auto;
+    }
+  }
 }

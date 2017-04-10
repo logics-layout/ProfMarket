@@ -88,55 +88,69 @@ if ($.fn.slick) {
             }
         ]
     });
+
+    $('.itemList_slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: false,
+        arrows: true,
+        prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 645,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
+    });
 //
-//     var itemDetaliSlider = $('.item-detali-slider-view');
-//     var itemDetaliSliderPreview = $('.item-detali-slider-preview');
-//     itemDetaliSlider.slick({
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         dots: false,
-//         arrows: false,
-//         infinite: false,
-//         adaptiveHeight: true,
-//         asNavFor: itemDetaliSliderPreview,
-//         responsive: [
-//             {
-//                 breakpoint: 768,
-//                 settings: {
-//                     dots: true,
-//                 }
-//             },
-//         ]
-//         // autoplay: true,
-//         // autoplaySpeed: 3000,
-//         prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
-//         nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
-//     });
-//
-//     itemDetaliSliderPreview.slick({
-//         slidesToShow: 4,
-//         slidesToScroll: 1,
-//         dots: false,
-//         vertical: true,
-//         verticalSwiping: true,
-//         infinite: false,
-//         arrows: true,
-//         asNavFor: itemDetaliSlider,
-//         focusOnSelect: true,
-//         // autoplay: true,
-//         // autoplaySpeed: 3000,
-//         prevArrow: "<button class='slick-prev slick-arrow'><svg class='icon__arrow-top' width='19px' height='19px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrowTop'></use></svg></button>",
-//         nextArrow: "<button class='slick-next slick-arrow'><svg class='icon__arrow-bottom' width='19px' height='19px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrowBottom'></use></svg></button>",
-//         responsive: [
-//         //     {
-//         //         breakpoint: 768,
-//         //         settings: {
-//         //             dots: false,
-//         //             arrows: false,
-//         //         }
-//         //     },
-//         ]
-//     });
+    var itemDetaliSlider = $('.detali__slider-view');
+    var itemDetaliSliderPreview = $('.detali__slider-preview');
+    itemDetaliSlider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        infinite: false,
+        adaptiveHeight: true,
+        asNavFor: itemDetaliSliderPreview,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
+    });
+
+    itemDetaliSliderPreview.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: false,
+        arrows: false,
+        asNavFor: itemDetaliSlider,
+        focusOnSelect: true,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        prevArrow: "<button class='slick-prev slick-arrow'><svg class='icon__arrow-top' width='19px' height='19px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrowTop'></use></svg></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><svg class='icon__arrow-bottom' width='19px' height='19px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrowBottom'></use></svg></button>",
+        responsive: [
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+        ]
+    });
 }
 
 if($.fn.selectpicker){

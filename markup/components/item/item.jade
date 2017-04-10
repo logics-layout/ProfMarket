@@ -1,7 +1,21 @@
-mixin item(num)
+mixin item(num, keyData)
     - num = num || 0;
     - var rowItem = {}
-    - if(item.list[num])
-        - rowItem = item.list[num]
-    - else
-        - rowItem = item.list[0]
+    - var keyData = keyData || 'brick'
+    if item[keyData]
+        if item[keyData].list[num]
+            - rowItem = item[keyData].list[num]
+        else
+            - rowItem = item[keyData].list[0]
+
+        - var notBorder = item[keyData].notBorder?"item__footer_notBorder":""
+
+        a(href="#").item.not-styleLink
+            span.db.item__after.color-blueThree
+            span.db.item__head
+                span.db.item__img: +img(rowItem.img)
+                span.db.item__title= rowItem.title
+            span.db.item__footer(class=notBorder)
+                if rowItem.price
+                    span.db.item__price от #[b #{rowItem.price}] руб./ м2
+                span.db.item__btn: button.btn.btn-red.btn-bg ПОДРОБНЕЕ

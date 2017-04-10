@@ -1,0 +1,190 @@
+extends main
+
+include ../components/item/item
+
+block head
+    - var headData = {title: "детальная"}
+
+block content
+    .container
+        h1.text-center Профнастил с8 (С8)(Профлист с8) оцинкованный 1200 мм, толщиной 0,45 мм в Челябинске
+
+        .detali
+            .detali__content
+                .detali__content-right
+                    .not-styleLink
+                        .detali__link-sections
+                            .detali__link-sections-section
+                                a(href="#").detali__link: span Бесплатный замер
+                            .detali__link-sections-section
+                                a(href="#").detali__link: span Расчёт материалов
+                            .detali__link-sections-section
+                                a(href="#").detali__link: span Купить в кредит
+                    .detali__slider
+                        .detali__slider-view
+                            .detali__slider-view-section: img(src="https://img01.kupiprodai.ru/012016/1454047671598.jpg")
+                            .detali__slider-view-section: img(src="https://images.by.prom.st/49325086_w640_h640_15032012634.jpg")
+                            .detali__slider-view-section: img(src="http://www.istoksochi.ru.opt-images.1c-bitrix-cdn.ru/upload/images_product/20151127/L/34.jpg?144861189633776")
+                            .detali__slider-view-section: img(src="http://www.krov-market.ru/upload/resize_cache/iblock/725/800_533_18477f7db27dcaeede8dd2b7b01aa8c6c/725bbf0934070cfe413750c7bb6f813a.jpg")
+                            .detali__slider-view-section: img(src="http://images.starbast.com.ua/mimg/238339940099.jpg")
+                            .detali__slider-view-section: img(src="https://img01.kupiprodai.ru/012016/1454047671598.jpg")
+                            .detali__slider-view-section: img(src="https://images.by.prom.st/49325086_w640_h640_15032012634.jpg")
+                            .detali__slider-view-section: img(src="http://www.istoksochi.ru.opt-images.1c-bitrix-cdn.ru/upload/images_product/20151127/L/34.jpg?144861189633776")
+                            .detali__slider-view-section: img(src="http://www.krov-market.ru/upload/resize_cache/iblock/725/800_533_18477f7db27dcaeede8dd2b7b01aa8c6c/725bbf0934070cfe413750c7bb6f813a.jpg")
+
+                        .detali__slider-preview
+                            .detali__slider-preview-section: +img('content/detali__slider/1')
+                            .detali__slider-preview-section: +img('content/detali__slider/2')
+                            .detali__slider-preview-section: +img('content/detali__slider/3')
+                            .detali__slider-preview-section: +img('content/detali__slider/4')
+                            .detali__slider-preview-section: +img('content/detali__slider/1')
+                            .detali__slider-preview-section: +img('content/detali__slider/2')
+                            .detali__slider-preview-section: +img('content/detali__slider/3')
+                            .detali__slider-preview-section: +img('content/detali__slider/4')
+                .detali__content-left
+                    br.hidden-md-up
+                    .detali__features-list
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('features')
+                            .detali__features-item-desc
+                                p.detali__features-item-title Характеристики
+                                p.detali__features-item-text Ширина листа:  полная ширина 1200мм, рабочая 1150мм #[br] Длинна листа:  от 0,5 до 11 метров #[br] Толщина листа:  0,35 - 0,7мм #[br] Вес 1 м2:  4,5 кг #[br] Вес 1 пог.м:  5 кг
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('roof')
+                            .detali__features-item-desc
+                                p.detali__features-item-title Наличие на складе
+                                p.detali__features-item-text Всегда в наличии на складе следующие длины: #[br] Листы по 2, 3, 6 метров
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('payment')
+                            .detali__features-item-desc
+                                p.detali__features-item-title Оплата
+                                p.detali__features-item-text Наличный и безналичный расчёт, карта оплаты. #[br] Для продукции “Под заказ” — 50% предоплата, остаток по факту изготовления
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('shipping')
+                            .detali__features-item-desc
+                                p.detali__features-item-title Доставка
+                                p.detali__features-item-text Сделаем выгодную доставку по Челябинску и области. #[br] Самовывоз со склада.
+                        br
+                        br.hidden-lg-down
+                        hr.hr-three.hr-two
+
+            .row
+                .col-lg-6
+                    h2.color-red Возможные цвета профнастила с8 по каталогу RAL
+                .col-lg-6.text-right
+                    span.price-prev.dib 250 руб.
+                    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    span.price.dib 190 руб. м.кв
+                    |&nbsp;&nbsp;&nbsp;
+                    button.btn.btn-red.btn-notShadow.btn-lg Заказать профнастил
+            br
+            .color-list
+                .color-list__section
+                    .color-list__item(style="background-color: #f9f9f9;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #e2dccc;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #a3a3a3;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #958b90;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #d3c376;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #f2eea5;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                .color-list__section
+                    .color-list__item(style="background-color: #e9bd25;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #930000;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #470002;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #4f0001;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #70070e;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #fd0000;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                .color-list__section
+                    .color-list__item(style="background-color: #ea510d;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #014a01;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #002714;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #00006b;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #05168b;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+                    .color-list__item(style="background-color: #411c00;color: #fff;")
+                        .color-list__item-left RAL 9003
+                        .color-list__item-right.text-right Белый
+        hr.hr-two.hr-three.hr-margin_big
+
+    .container
+        h2.h2-big.color-red С этим товаром также покупают:
+
+        .itemList.itemList_slider.arrow-inner
+            -for(var i = 0; i<8;i++)
+                .itemList__section.itemList__section_widthAuto
+                    +item(i)
+
+
+    br
+    br
+
+
+block script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

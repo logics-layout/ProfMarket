@@ -99,6 +99,14 @@ hr{
   &.hr-two{
     margin: 20px 0;
   }
+  &.hr-three{
+    border-color: #adadad;
+  }
+  &.hr-margin{
+    &_big{
+      margin: 48px 0;
+    }
+  }
 }
 
 ol, ul{
@@ -408,6 +416,31 @@ table{
   }
 }
 
+.arrow-inner{
+  .slick-arrow{
+    @include btn-clear;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+    &:after{
+      content: '';
+      display: inline-block;
+    }
+    &:hover{
+      color: #d83622;
+    }
+    &.slick-prev{
+      right: 100%;
+      padding-right: 30px;
+    }
+    &.slick-next{
+      left: 100%;
+      padding-left: 30px;
+    }
+  }
+}
 .arrow-default{
   .slick-arrow{
     @include btn-clear;
@@ -506,11 +539,30 @@ table{
     }
   }
 }
+.dib{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.price{
+  color: #db4c3b;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  &-prev{
+    line-height: normal;
+    color: #989898;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: line-through;
+  }
+}
 
 
 @include text-border-bottom('white', #fff);
 @include text-border-bottom('blue', #3a5072);
 @include text-border-bottom('blueTwo', #3c77f1);
+@include text-border-bottom('blueThree', #36a4dd);
 @include text-border-bottom('red', #b43520);
 @include text-border-bottom('black', #333);
 
