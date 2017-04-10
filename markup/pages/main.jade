@@ -26,7 +26,10 @@ html(class="no-js", lang="ru")
                     .breadcrumb-block
                         ul.breadcrumb.not-styleLink
                             li: a(href="#"): span Главная
-                            li: span О компании
+                            - if(headData)
+                                li: span= headData.title
+                            - else
+                                li: span= head.defaults.title
 
             //- Include your components here
             // start block content

@@ -286,3 +286,14 @@ $('.tabs__nav').find('a').click(function(e){
 
     block.delay(time).fadeIn(time)
 });
+
+$('.category-list__item-btnToggle').click(function (e) {
+    e.preventDefault();
+    var _this = $(this),
+        list = $(_this.data('block'));
+
+    if(list[0]){
+        _this.slideUp(300);
+        list.slideDown(300);
+    }
+});

@@ -1,0 +1,240 @@
+extends main
+
+block head
+    - var headData = {title: "Каталог продукции"}
+
+block content
+    .container
+        h1.text-center Каталог продукции
+
+        .category-list.not-styleLink
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/1', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Кровельные материалы
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Профнастил
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Металлочерепица
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Гибкая черепица
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Композитная черепица
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Ондулин
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Ондувилла
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Наплавляемая кровля
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Полимерная ПВХ-мембрана
+                        li: a(href="#").color-blueTwo.category-list__item-btnToggle(data-block="#category-list-1")
+                            spam.color-blueTwo__title.color-blueTwo__title_dashed.color-blueTwo__title_viewBorder Смотреть весь список
+                            |&nbsp;
+                            +icon('category-list-toggle')
+                    ul.category-list__item-list.category-list__item-list_toggle#category-list-1
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Профнастил
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Металлочерепица
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Гибкая черепица
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/2', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Фасадные материалы
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Сайдинг
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Виниловый сайдинг
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Цокольный сайдинг
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Металлосайдинг
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Фасадные панели
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Композитные панели
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Керамогранит
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Штукатурный фасад
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/3', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Стеновые материалы
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Газоблок
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Пеноблок
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Керамический блок
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Кирпич
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Шлакоблок
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Керамзитоблок
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Полистиролбетон
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Арболитовые блоки
+                        li: a(href="#").color-blueTwo.category-list__item-btnToggle(data-block="#category-list-2")
+                            spam.color-blueTwo__title.color-blueTwo__title_dashed.color-blueTwo__title_viewBorder Смотреть весь список
+                            |&nbsp;
+                            +icon('category-list-toggle')
+                    ul.category-list__item-list.category-list__item-list_toggle#category-list-2
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Газоблок
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Пеноблок
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Керамический блок
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/4', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Стеновые материалы
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Кровельные сэндвич-панели
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Стеновые сэндвич-панели
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Сэндвич-панели поэлементной сборки
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Сэндвич-панели из минваты
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Сэндвич-панели из пенопласта
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Сэндвич-панели из пенополиуретана (ППУ)
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/5', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Отделочные материалы
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Гипсокартон
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Профили для гипсокартона
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Строительные смеси
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Ламинат
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/6', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Утеплитель и изоляция
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Гидро-пароизоляция
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Минвата
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Стекловата
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Пенопласт
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Экструдированный пенополистирол
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Керамзит
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/7', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Металлопрокат
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Трубы
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Труба профильная
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Швеллер
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Балки
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Арматура
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder ЛСТК
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/8', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title ЖБИ-изделия
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Блоки ФБС
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Плиты перекрытий
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Перемычки
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/9', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Заборы и ограждения
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Из профнастила
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Евроштакетник
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Сетчатые ограждения
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/10', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Окна
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Пластиковые окна
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Мансардные окна
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/11', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Двери
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Межкомнатные двери
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Входные двери
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/12', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Лестницы
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Модульные лестницы
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Чердачные лестницы
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Межэтажные лестницы
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/13', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Пиломатериалы
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder OSB-3
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Фанера
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Брус
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Доска
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/14', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Отопление
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Радиаторы отопления
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Котлы отопления
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Печи для бань
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/15', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Освещение
+                    ul.category-list__item-list
+                        li: a(href="#").color-black: spam.color-black__title.color-black__title_viewBorder Светодиодные светильники
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/16', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Тротуарная плитка
+            .category-list__section
+                .category-list__item
+                    a(href="#").category-list__item-img: +img('content/category-list-inner/17', 'png')
+                    a(href="#").category-list__item-title.color-blue: spam.color-blue__title Теплицы
+
+        br
+        br
+        br
+
+    .sms-discount
+        .container
+            p.sms-discount__title.text-center Проверьте свою удачу!
+                br
+                |Получите SMSскидку от 5% до 12% прямо сейчас
+
+            .sms-discount__table
+                .sms-discount__table-cell.sms-discount__table-cell_text.
+                    «Испытайте свою удачу! Оставьте номер своего телефона, #[br.hidden-xs-down] чтобы узнать размер своей персональной скидки! #[br.hidden-xs-down] На ваш телефон придет SMS-купон на скидку при покупке #[br.hidden-xs-down] профнастила, которая может составить от #[b.color-red 5%] до #[b.color-red 12%] #[br.hidden-xs-down] от актуальной цены материала. Размер персональной скидки #[br.hidden-xs-down] назначается случайно.
+                .sms-discount__table-cell.sms-discount__table-cell_phone
+                    +img('content/sms-discount-phone', 'png')
+                .sms-discount__table-cell.sms-discount__table-cell_top
+                    form.sms-discount__form
+                        .form-group
+                            input.form-control(placeholder="Ваш телефон")
+                        button.btn.btn-red.btn-bg.btn-width.btn-md ПОЛУЧИТЬ СКИДКУ
+
+    br
+    br
+
+
+block script
+    script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

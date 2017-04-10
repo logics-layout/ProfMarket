@@ -357,8 +357,48 @@ body {
   background-color: #e6e6e6;
 }
 
-
-
-
+.category-list{
+  font-size: 0;
+  margin: -20px -15px;
+  &__section{
+    width: 25%;
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px 15px;
+  }
+  &__item{
+    &-img{
+      display: block;
+      height: 170px;
+      line-height: 170px;
+      img{
+        display: inline-block;
+      }
+    }
+    &-title{
+      color: #1864b0;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 10px;
+    }
+    &-list{
+      @include nl;
+      font-size: 15px;
+      line-height: 32px;
+      &_toggle{
+        display: none;
+      }
+      li{
+        a{
+          display: block;
+          //padding: 6.5px 0;
+        }
+      }
+    }
+  }
+}
 
 
