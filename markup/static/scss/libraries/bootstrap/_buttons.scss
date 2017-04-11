@@ -14,7 +14,6 @@
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  //border: 3px solid transparent;
   border: none;
   white-space: nowrap;
   @include button-size(8.5px, 24px, $font-size-base, $line-height-base, $btn-border-radius-base);
@@ -119,6 +118,9 @@ a.btn {
 .btn-red{
   @include button-variant(#fff, #d83622);
 }
+.btn-white{
+  @include button-variant(#333, #fff);
+}
 
 // Link buttons
 // -------------------------
@@ -173,6 +175,13 @@ a.btn {
   font-size: 16px;
   padding: 15px 29px;
   border-radius: 19px;
+}
+.btn-sm {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5.5px 15px;
+  padding-bottom: 8px;
+  line-height: normal;
 }
 
 

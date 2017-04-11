@@ -52,8 +52,8 @@
   }
 
   &.btn-border{
+    border: 2px solid $background;
     background: transparent;
-    border-color: $background;
     color: $background;
     //  color: #000;
 

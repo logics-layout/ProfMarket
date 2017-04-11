@@ -1,15 +1,163 @@
 extends main
 
+include ../components/item/item
+
 block head
     - var headData = {title: "Главная"}
     - var breadcrumb = true
     - var index = 'header_index'
 
 block content
+    br
+    .container
+        .row
+            .col-xl-3.col-lg-4.hidden-md-down
+                .index-banner(style="background-image: url('%=static=%img/content/banner-index-bg.png');").not-styleLink.text-right
+                    .dib.index-banner__content.text-left
+                        p.index-banner__title Текст баннера
+                        p.index-banner__text Это пример текста баннера
+                        a(href="#").index-banner__btn.btn.btn-blue ПОДРОБНЕЕ
+                .index-banner(style="background-image: url('%=static=%img/content/index-banner-bg_2.png');").not-styleLink.text-right
+                    .dib.index-banner__content.text-left
+                        p.index-banner__title Текст баннера
+                        p.index-banner__text Это пример текста баннера
+                        a(href="#").index-banner__btn.btn.btn-blue ПОДРОБНЕЕ
+
+            .col-xl-9.col-lg-8
+                .index-slider.not-styleLink
+                    -for(var i = 0; i<3;i++)
+                        .index-slider__section
+                            .index-slider__table
+                                .index-slider__table-cell.index-slider__table-cell_img.hidden-sm-down
+                                    +img('content/index-slider/master', 'png')
+                                .index-slider__table-cell
+                                    p.index-slider__title Кровельные материалы
+                                    p.index-slider__text Наша компания строительных материалов может предложить Вам купить продукцию на лучших условиях по оптовым и розничным ценам!
+                                    a(href="#").btn.btn-red.btn-bg ПОДРОБНЕЕ
+
+
+        br
+
+
+        p.index-title.text-center.color-redTwo Кровельные материалы
+        .index-title-btn
+            a(href="#").not-styleLink.btn.btn-red.btn-border.btn-notShadow.btn-sm смотреть все
+
+        .itemList
+            -for(var i = 0; i<8;i++)
+                .itemList__section
+                    +item(i, 'roof')
+
+    br
+    br
+    br
+    .index-blockBgItem
+        .container
+            p.index-title.text-center.color-blueFour Фасадные материалы
+            .index-title-btn
+                a(href="#").not-styleLink.btn.btn-white.btn-border.btn-notShadow.btn-sm смотреть все
+
+            .itemList
+                -for(var i = 0; i<8;i++)
+                    .itemList__section
+                        +item(i, 'facades')
+    br
+    .container
+        p.index-title.text-center.color-redTwo Стеновые материалы
+        .index-title-btn
+            a(href="#").not-styleLink.btn.btn-red.btn-border.btn-notShadow.btn-sm смотреть все
+
+        .itemList
+            -for(var i = 0; i<8;i++)
+                .itemList__section
+                    +item(i)
+    br
+    br
+    .index-blockColorItem
+        .container
+            p.index-title.text-center.color-blueFour Другие разделы
+
+            .itemList
+                -for(var i = 0; i<8;i++)
+                    .itemList__section
+                        +item(i)
+    br
+    br
+    .container
+        p.index-title.index-title_small.text-center.color-redTwo Генеральный поставщик стройматериалов в Челябинске - "Профмаркет"
+    .index-homeBlock
+        .container
+            .row: .col-lg-7.col-xl-10
+                p Наша компания строительных материалов может предложить Вам купить продукцию на лучших условиях по оптовым и розничным ценам!
+                p Мы гарантируем для наших покупателей великолепные цены, моментальные сроки поставки, широчайший выбор и многое другое.
+                p В ходе проведения строительства, ремонтных работ немалого внимания требует подбор строительных материалов. С современным ассортиментом всерьез возникает опасность утонуть в море информации, подбирая материалы. Множество марок, разнообразное качество, каждый вид материалов может быть представлен в большом разнообразии. И для того чтобы с ним ознакомиться, придется посещать множество магазинов, которые могут располагаться в разных районах. Для того чтобы упростить поиск, резоннее обратиться в интернет-
+                p магазин строительных материалов, ассортимент которого сможет удовлетворить любого покупателя.
+
+    br
+    br
+    .index-grey
+        .container
+            p.index-title.index-title_small.text-center.color-redTwo У нас вы можете приобрести такие стройматериалы в Челябинске:
+            .index-grey__table
+                .index-grey__table-cell.index-grey__table-cell_img: +img('content/home', 'png')
+                .index-grey__table-cell
+                    .index-grey__sections
+                        .index-grey__section
+                            p.index-grey__title Кровельные материалы
+                            ul.ul-style.not-styleLink
+                                li: a(href='#').color-black: span.color-black__title Профнастил;
+                                li: a(href='#').color-black: span.color-black__title Металлочерепица;
+                                li: a(href='#').color-black: span.color-black__title Гибкая черепица;
+                                li: a(href='#').color-black: span.color-black__title Композитная черепица;
+                                li: a(href='#').color-black: span.color-black__title Ондулин;
+                                li: a(href='#').color-black: span.color-black__title Ондувилла;
+                                li: a(href='#').color-black: span.color-black__title Водосточные системы;
+                                li: a(href='#').color-black: span.color-black__title Сопутствующие материалы.
+
+                        .index-grey__section.index-grey__list-sections
+                            .index-grey__list-section
+                                p.index-grey__title Фасадные материалы
+                                ul.ul-style.not-styleLink
+                                    li: a(href='#').color-black: span.color-black__title Сайдинг;
+                                    li: a(href='#').color-black: span.color-black__title Виниловый сайдинг;
+                                    li: a(href='#').color-black: span.color-black__title Цокольный сайдинг;
+                                    li: a(href='#').color-black: span.color-black__title Металлосайдинг;
+                                    li: a(href='#').color-black: span.color-black__title Фасадные панели.
+                            .index-grey__list-section
+                                p.index-grey__title Стеновые материалы
+                                ul.ul-style.not-styleLink
+                                    li: a(href='#').color-black: span.color-black__title Газоблок;
+                                    li: a(href='#').color-black: span.color-black__title Пеноблок;
+                                    li: a(href='#').color-black: span.color-black__title Керамический блок;
+                                    li: a(href='#').color-black: span.color-black__title Кирпич
+                            .index-grey__list-section
+                                p.index-grey__title Сэндвич-Панели
+                                ul.ul-style.not-styleLink
+                                    li: a(href='#').color-black: span.color-black__title Стеновые;
+                                    li: a(href='#').color-black: span.color-black__title Кровельные;
+                                    li: a(href='#').color-black: span.color-black__title Поэлементной сборки.
+                            .index-grey__list-section
+                                p.index-grey__title Отделочные материалы
+                                ul.ul-style.not-styleLink
+                                    li: a(href='#').color-black: span.color-black__title Заборы и ограждения;
+                                    li: a(href='#').color-black: span.color-black__title Металлопрокат;
+                                    li: a(href='#').color-black: span.color-black__title ЖБИ
+                            .index-grey__list-section
+                                p.index-grey__title Утеплитель
+                                ul.ul-style.not-styleLink
+                                    li: a(href='#').color-black: span.color-black__title Керамзит;
+                                    li: a(href='#').color-black: span.color-black__title Гидро и пароизоляция;
+                                    li: a(href='#').color-black: span.color-black__title Минеральная вата.
+                            .index-grey__list-section
+                                p.index-grey__title Окна и лестницы
+                                ul.ul-style.not-styleLink
+                                    li: a(href='#').color-black: span.color-black__title Чердачные лестницы;
+                                    li: a(href='#').color-black: span.color-black__title Мансардные окна;
 
 
 
-
+    br
+    br
 
 
 block script

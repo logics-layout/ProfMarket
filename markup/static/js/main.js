@@ -41,6 +41,15 @@ if ($.fn.slick) {
 //     }).on('afterChange', checkBg);
 //     checkBg();
 //
+    $('.index-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev-index'></i></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next-index'></i></button>",
+    });
+
     $('.slider-inner').slick({
         slidesToShow: 1,
         slidesToScroll: 1,

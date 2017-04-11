@@ -1,21 +1,24 @@
 mixin item(num, keyData)
     - num = num || 0;
-    - var rowItem = {}
+    - var itemList = {}
     - var keyData = keyData || 'brick'
     if item[keyData]
-        if item[keyData].list[num]
-            - rowItem = item[keyData].list[num]
-        else
-            - rowItem = item[keyData].list[0]
+        - var itemRow = item[keyData]
 
-        - var notBorder = item[keyData].notBorder?"item__footer_notBorder":""
+        if itemRow.list[num]
+            - itemList = itemRow.list[num]
+        else
+            - itemList = itemRow.list[0]
+
+        - var notBorder = itemRow.notBorder?"item__footer_notBorder":""
 
         a(href="#").item.not-styleLink
-            span.db.item__after.color-blueThree
-            span.db.item__head
-                span.db.item__img: +img(rowItem.img)
-                span.db.item__title= rowItem.title
-            span.db.item__footer(class=notBorder)
-                if rowItem.price
-                    span.db.item__price от #[b #{rowItem.price}] руб./ м2
-                span.db.item__btn: button.btn.btn-red.btn-bg ПОДРОБНЕЕ
+            span.db.item__after(style!=itemRow.style)
+            span.db.item__content
+                span.db.item__head
+                    span.db.item__img: +img(itemList.img)
+                    span.db.item__title= itemList.title
+                span.db.item__footer(class=notBorder)
+                    if itemList.price
+                        span.db.item__price от #[b #{itemList.price}] руб./ м2
+                    span.db.item__btn: button.btn.btn-red.btn-bg ПОДРОБНЕЕ
