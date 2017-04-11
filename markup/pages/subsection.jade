@@ -1,0 +1,459 @@
+extends main
+
+mixin item-two()
+    .itemList
+        -for(var i = 0; i<8;i++)
+            .itemList__section.itemList__section_two
+                a(href="#").item-two.not-styleLink
+                    span.db.item-two__after
+                    span.db.item-two__title Профнастил С8
+                    span.db.item-two__img: +img('content/item')
+                    span.db.item-two__features
+                        span.item-two__features-row
+                            span.item-two__features-cell Покрытие
+                            span.item-two__features-cell.item-two__features-cell_desc Оцинкованный
+                        span.item-two__features-row
+                            span.item-two__features-cell Толщина
+                            span.item-two__features-cell.item-two__features-cell_desc 0,45 мм МП
+                        span.item-two__features-row
+                            span.item-two__features-cell Гарантия
+                            span.item-two__features-cell.item-two__features-cell_desc 5 лет
+
+                    span.db.item-two__price.text-center
+                        span.item-two__price-decount: b 260 руб.
+                        span.item-two__price-default: b 210 руб.
+
+                    span.db.item-two__listBtns
+                        span.item-two__listBtns-section
+                            button.btn.btn-grey.btn-border.btn-notShadow.btn-width Подробнее
+                        span.item-two__listBtns-section
+                            button.btn.btn-red.btn-bg.btn-width ЗАКАЗАТЬ
+
+
+block head
+    - var headData = {title: "Подраздел"}
+
+block content
+    .container
+        h1.text-center Купить профнастил с8 (С 8) в Челябинске от производителей по отличной цене
+
+        .detali
+            .detali__content
+                .detali__content-right
+                    .not-styleLink
+                        .detali__link-sections
+                            .detali__link-sections-section
+                                a(href="#").detali__link: span Бесплатный замер
+                            .detali__link-sections-section
+                                a(href="#").detali__link: span Расчёт материалов
+                            .detali__link-sections-section
+                                a(href="#").detali__link: span Купить в кредит
+                    .detali__slider
+                        .detali__slider-view
+                            .detali__slider-view-section: img(src="https://img01.kupiprodai.ru/012016/1454047671598.jpg")
+                            .detali__slider-view-section: img(src="https://images.by.prom.st/49325086_w640_h640_15032012634.jpg")
+                            .detali__slider-view-section: img(src="http://www.istoksochi.ru.opt-images.1c-bitrix-cdn.ru/upload/images_product/20151127/L/34.jpg?144861189633776")
+                            .detali__slider-view-section: img(src="http://www.krov-market.ru/upload/resize_cache/iblock/725/800_533_18477f7db27dcaeede8dd2b7b01aa8c6c/725bbf0934070cfe413750c7bb6f813a.jpg")
+                            .detali__slider-view-section: img(src="http://images.starbast.com.ua/mimg/238339940099.jpg")
+                            .detali__slider-view-section: img(src="https://img01.kupiprodai.ru/012016/1454047671598.jpg")
+                            .detali__slider-view-section: img(src="https://images.by.prom.st/49325086_w640_h640_15032012634.jpg")
+                            .detali__slider-view-section: img(src="http://www.istoksochi.ru.opt-images.1c-bitrix-cdn.ru/upload/images_product/20151127/L/34.jpg?144861189633776")
+                            .detali__slider-view-section: img(src="http://www.krov-market.ru/upload/resize_cache/iblock/725/800_533_18477f7db27dcaeede8dd2b7b01aa8c6c/725bbf0934070cfe413750c7bb6f813a.jpg")
+
+                        .detali__slider-preview
+                            .detali__slider-preview-section: +img('content/detali__slider/1')
+                            .detali__slider-preview-section: +img('content/detali__slider/2')
+                            .detali__slider-preview-section: +img('content/detali__slider/3')
+                            .detali__slider-preview-section: +img('content/detali__slider/4')
+                            .detali__slider-preview-section: +img('content/detali__slider/1')
+                            .detali__slider-preview-section: +img('content/detali__slider/2')
+                            .detali__slider-preview-section: +img('content/detali__slider/3')
+                            .detali__slider-preview-section: +img('content/detali__slider/4')
+                    br
+                    .row
+                        .col-sm-6
+                            p.detali__title: b Профнастил С8
+                        .col-sm-6.text-right.hidden-xs-down
+                            span.price.dib от 190 руб.
+                    span.price.dib.hidden-sm-up от 190 руб.
+
+
+                    hr.hr-margin_disposable
+                    .text-right
+                        button.btn.btn-red.btn-notShadow.btn-lg Заказать профнастил
+                    br.hidden-md-up
+
+
+                .detali__content-left
+                    br.hidden-md-up
+                    .detali__features-list
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('line')
+                            .detali__features-item-desc
+                                p.detali__features-item-title Размеры
+                                p.detali__features-item-text Ширина листа:  полная ширина 1200мм, рабочая 1150мм #[br] Длинна листа:  от 0,5 до 11 метров #[br] Толщина листа:  0,35 - 0,7мм
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('roof')
+                            .detali__features-item-desc
+                                p.detali__features-item-title Наличие на складе
+                                p.detali__features-item-text Всегда в наличии на складе следующие длины: #[br] Листы по 2, 3, 6 метров
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('features')
+                            .detali__features-item-desc
+                                p.detali__features-item-title На заказ
+                                p.detali__features-item-text Изготовим по Вашим размерам от 0,5 до 11 метров #[br] Срок изготовления: 1-7 дней
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('brush')
+                            .detali__features-item-desc
+                                p.detali__features-item-title Варианты покрытий
+                                p.detali__features-item-text Оцинковка, Полиэстер, Norman, Viking, ECOSTEL (под дерево и камень), Пуретан, Prisma, Cloudy, Пластизол, Agneta, PUR 50
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('payment')
+                            .detali__features-item-desc
+                                p.detali__features-item-title Оплата
+                                p.detali__features-item-text Наличный и безналичный расчёт, карта оплаты. #[br] Для продукции “Под заказ” — 50% предоплата, остаток по факту изготовления
+                        .detali__features-item
+                            .detali__features-item-icon: +icon('shipping')
+                            .detali__features-item-desc
+                                p.detali__features-item-title Доставка
+                                p.detali__features-item-text Сделаем выгодную доставку по Челябинску и области. #[br] Самовывоз со склада.
+                        .detali__features-item
+                            .detali__features-item-icon
+                            .detali__features-item-desc
+                                a(href="#").not-styleLink.color-black: b.color-black__title.color-black__title_viewBorder Все характеристики
+    br
+    br
+    .inner-blockBgGrey
+        .container
+            .row
+                .col-lg-6
+                    .banner-inner
+                        .banner-inner__content
+                            p.banner-inner__title: b БЕСПЛАТНО
+                            p.banner-inner__text: b Поможем с монтажём
+                            br
+                            a.banner-inner__btn.not-styleLink.btn.btn-white.btn-border.btn-notShadow.btn-sm Узнать об услуге
+                .col-lg-6
+                    br.hidden-lg-up
+                    .guarantee
+                        .guarantee__desc
+                            p.guarantee__title #[span 100%] #[br] Гарантия качества
+                            p.guarantee__text Полная материальная ответственность за качество металлочерепицы и гарантия
+                        .guarantee__icon.hidden-xs-down: i.s-guarantee
+            br
+            .offer.inner-blockBgGrey__bottom.text-center
+                p.offer__title Хотите получить профнастил С8 с гарантией лучшей цены?
+                .offer__line
+                p.offer__text Для вас мы уже проверили всех поставщиков профнастила в Челябинске и можем предложить #[br.hidden-md-down] вам его по самой выгодной цене в регионе!
+                p.offer__titleSub Акция действует до 31.04.2017
+                button.btn.btn-red.btn-bg.offer__btn Получить гарантию!
+
+    br
+    .container
+        .tabs-table-block
+            ul.tabs-table.not-styleLink
+                li.tabs-table__cell.active: a(href="#", data-block="#tabs-table-1") В начало
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-2") Цены
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-3") Описание
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-4") Характеристики
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-5") Как купить
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-6") Гарантии
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-7") Товары
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-8") Отзывы
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-9") Вопросы и ответы
+        br
+        br
+        .tabs-table-content
+            .tabs-table-content__item.active#tabs-table-1
+                .row
+                    .col-lg-9
+                        h2.h2-big.color-red Цена на Профнастил с8 оцинкованный в Челябинске
+                        blockquote
+                            P Наша компания поможет Вам купить профнасти С8, цена которая доступна для каждого и наилучшего качества. Профнасти С8 считается самым популярным материалом как для частного, так и для “большого” строительства. И это все из-за его высокой надежности, долговечности и простоты обработки.
+                            P На поверхность профнастила данной марки нанесено специальное покрытие, которое защищает лист от коррозии. Самое важное преимущество С8- сравнительно невысокая цена профлиста С8 в Челябинске
+                    .col-lg-3
+                        .statistics-buyers
+                            .statistics-buyers__head: b Выбор покупателей
+                            .statistics-buyers__body Какой на Ваш взгляд #[br] профнастил лучше?
+                            .statistics-buyers__footer
+                                .statistics-buyers__statistics-list
+                                    .statistics-buyers__statistics-list-title 0,35
+                                    .statistics-buyers__statistics-list-scale: span
+                                .statistics-buyers__statistics-list
+                                    .statistics-buyers__statistics-list-title 0,4
+                                    .statistics-buyers__statistics-list-scale: span(style="background-color: #e9e9e9;width: 20%;")
+                                .statistics-buyers__statistics-list
+                                    .statistics-buyers__statistics-list-title 0,4 мп
+                                    .statistics-buyers__statistics-list-scale: span(style="background-color: #c5c5c5;width: 80%;")
+                                .statistics-buyers__statistics-list
+                                    .statistics-buyers__statistics-list-title 0,45
+                                    .statistics-buyers__statistics-list-scale: span
+                                .statistics-buyers__statistics-list
+                                    .statistics-buyers__statistics-list-title 0,45 мп
+                                    .statistics-buyers__statistics-list-scale: span
+                                .statistics-buyers__statistics-list
+                                    .statistics-buyers__statistics-list-title 0,5
+                                    .statistics-buyers__statistics-list-scale: span(style="background-color: #c5c5c5;width: 100%;")
+                                .statistics-buyers__statistics-list
+                                    .statistics-buyers__statistics-list-title 0,55
+                                    .statistics-buyers__statistics-list-scale: span(style="background-color: #d7d7d7;width: 50%;")
+                                .statistics-buyers__statistics-list
+                                    .statistics-buyers__statistics-list-title 0,65
+                                    .statistics-buyers__statistics-list-scale: span
+                                .statistics-buyers__statistics-list
+                                    .statistics-buyers__statistics-list-title 0,7
+                                    .statistics-buyers__statistics-list-scale: span
+
+            .tabs-table-content__item#tabs-table-2: p и
+            .tabs-table-content__item#tabs-table-3: p 2
+            .tabs-table-content__item#tabs-table-4: p s
+            .tabs-table-content__item#tabs-table-5: p d
+            .tabs-table-content__item#tabs-table-6: p g
+            .tabs-table-content__item#tabs-table-7: p t
+            .tabs-table-content__item#tabs-table-8: p b
+            .tabs-table-content__item#tabs-table-9: p q
+
+        br
+        br
+        +item-two()
+    br
+    br
+    .sms-discount
+        .container
+            p.sms-discount__title.text-center Проверьте свою удачу!
+                br
+                | Получите SMSскидку от 5% до 12% прямо сейчас
+
+            .sms-discount__table
+                .sms-discount__table-cell.sms-discount__table-cell_text.
+                    «Испытайте свою удачу! Оставьте номер своего телефона, #[br.hidden-xs-down] чтобы узнать размер своей персональной скидки! #[br.hidden-xs-down] На ваш телефон придет SMS-купон на скидку при покупке #[br.hidden-xs-down] профнастила, которая может составить от #[b.color-red 5%] до #[b.color-red 12%] #[br.hidden-xs-down] от актуальной цены материала. Размер персональной скидки #[br.hidden-xs-down] назначается случайно.
+                .sms-discount__table-cell.sms-discount__table-cell_phone
+                    +img('content/sms-discount-phone', 'png')
+                .sms-discount__table-cell.sms-discount__table-cell_top
+                    form.sms-discount__form
+                        .form-group
+                            input.form-control(placeholder="Ваш телефон")
+                        button.btn.btn-red.btn-bg.btn-width.btn-md ПОЛУЧИТЬ СКИДКУ
+    br
+    br
+    .container
+        .row
+            .col-lg-9
+                h2.h2-big.color-red Цена на Профнастил с8 оцинкованный в Челябинске
+                blockquote
+                    P Наша компания поможет Вам купить профнасти С8, цена которая доступна для каждого и наилучшего качества. Профнасти С8 считается самым популярным материалом как для частного, так и для “большого” строительства. И это все из-за его высокой надежности, долговечности и простоты обработки.
+                    P На поверхность профнастила данной марки нанесено специальное покрытие, которое защищает лист от коррозии. Самое важное преимущество С8- сравнительно невысокая цена профлиста С8 в Челябинске
+            .col-lg-3
+                .statistics-buyers
+                    .statistics-buyers__head: b Выбор покупателей
+                    .statistics-buyers__body Какой на Ваш взгляд #[br] профнастил лучше?
+                    .statistics-buyers__footer
+                        .statistics-buyers__statistics-list
+                            .statistics-buyers__statistics-list-title 0,35
+                            .statistics-buyers__statistics-list-scale: span
+                        .statistics-buyers__statistics-list
+                            .statistics-buyers__statistics-list-title 0,4
+                            .statistics-buyers__statistics-list-scale: span(style="background-color: #e9e9e9;width: 20%;")
+                        .statistics-buyers__statistics-list
+                            .statistics-buyers__statistics-list-title 0,4 мп
+                            .statistics-buyers__statistics-list-scale: span(style="background-color: #c5c5c5;width: 80%;")
+                        .statistics-buyers__statistics-list
+                            .statistics-buyers__statistics-list-title 0,45
+                            .statistics-buyers__statistics-list-scale: span
+                        .statistics-buyers__statistics-list
+                            .statistics-buyers__statistics-list-title 0,45 мп
+                            .statistics-buyers__statistics-list-scale: span
+                        .statistics-buyers__statistics-list
+                            .statistics-buyers__statistics-list-title 0,5
+                            .statistics-buyers__statistics-list-scale: span(style="background-color: #c5c5c5;width: 100%;")
+                        .statistics-buyers__statistics-list
+                            .statistics-buyers__statistics-list-title 0,55
+                            .statistics-buyers__statistics-list-scale: span(style="background-color: #d7d7d7;width: 50%;")
+                        .statistics-buyers__statistics-list
+                            .statistics-buyers__statistics-list-title 0,65
+                            .statistics-buyers__statistics-list-scale: span
+                        .statistics-buyers__statistics-list
+                            .statistics-buyers__statistics-list-title 0,7
+                            .statistics-buyers__statistics-list-scale: span
+
+    br
+    br
+    .container
+        +item-two()
+        br
+        br
+        p: b.color-red Применение профнастила
+        p Достаточно универсальным материалом считается профнастил С8. Челябинск использует его, начиная с кровель зданий, заканчивая ограждающими конструкциями (заборами).
+        p Также он применяется как элемент конструкций быстровозводимых сооружений. При наличии собственного дома лучше всего использовать профлист с8, ведь он не зря пользуется такой популярностью. Ну а купить профнастил с8 в Челябинске можно воспользовавшись нашей компанией.
+    br
+    .index-grey
+        .container
+            p.index-title.text-center.color-red Технические характеристики профнастила С8
+            br
+            blockquote.blockquote_md
+                p: b.color-red Профлист в Челябинске.
+                p Профнастил — это оцинкованный лист с профилем, на который нанесено полимерное покрытие. При этом у каждого производителя могут быть совершенно разные покрытия: полиэстер, пластизол или пурал. На сам стальной лист наносится антикоррозийный слой, который сверху покрывается грунтовкой. Затем на лицевую сторону наносится полимерное покрытие, а на внутреннюю — специальный защитный лак.
+
+
+            .row
+                .col-lg-7
+                    table.not_style_default
+                        tr
+                            td(style="width: 30px;").hidden-sm-down
+                            td
+                                p(style="margin-bottom: 10px;"): b.color-red Достоинства профнастила.
+                                p Такой доступный материал, как профнастил, обладает различными достоинствами:
+                                ul.list-blue
+                                    li: p Универсальностью, которая считается самым важным его преимуществом. Ведь его можно использовать как покрытие кровли, обшивку стен и фасадов, а также для возведения заборов и перегородок и др.
+                                    li: p Легкостью монтажа, так как материал можно уложить при отсутствии специальных инструментов и знайний. Любому человеку, впервые увидевшему профнастил, легко даётся его укладка
+                                    li: p Долговечностью, которой нет у других подобных материалов. При его использовании испольуется только высококачественная сталь и современное гибочное оборудование, что позволило производителям давать гарантию на покрытие минимум 5 лет. При этом он прослужит полвека
+                                    li: p Огромным разнообразием цветов, что позволяет эксперементировать с различными оттенками и создавать индивидуальный стиль каждой постройке
+                                    li: p Невысокая цена профнастила, причём самой низкой среди всех покрытий. При использовании профнастила можно снизить затраты при строительстве крупных хданий на 15-20%
+                .col-lg-5.hidden-md-down
+                    br
+                    br
+                    br
+                    br
+                    br
+                    br
+                    br
+                    +img('content/inner-1', 'png')
+
+    .index-blockColorItem.index-blockColorItem_notShadow.index-blockColorItem_leaf
+        .container
+            .text-center
+                p.index-title.color-blueFour Сертификаты и гарантия
+                p Этот важный показатель, влияющий на устойчивость профнастила к коррозии. Соответственно, чем больше содержание цинка, тем выше выше будет срок эксплуатации и конечная стоимость изделия. Но зачастую продавцы предлагают более дешевый профнастил с маленьким содержанием цинка. К примеру, у листов, произведенных на ЛМК (Лысьвенский металлургический комбинат), содержание цинка в 10 раз меньше чем у ММК. Недостаток цинка ведёт к отшелушиванию лакокрасочного покрытия и коррозии металла, что совершенно недопустимо.
+            br
+            .footer__certificates.not-styleLink
+                -for(var o = 0; o<12;o++)
+                    a(href="#").footer__certificates-section
+                        .photo-popup
+                            +img('content/certificates', 'png')
+
+            br
+    br
+    br
+    .container
+        p.index-title.text-center.color-red Купить профнастил: 6 простых шагов для решения ваших задач
+        br
+        blockquote.blockquote_md
+            p «ПрофМаркет» предлагает самый широкий выбор профнастила в Челябинске. В нашем интернет-магазине вы можете купить все, что вам нужно: высококачественный профилированный лист различного назначения, с разной несущей способностью и монтажной шириной. Для экономного решения в наличии некондиционный профнастил для объектов, допускающих применение материала с дефектами. Мы предлагаем, в том числе, следующие виды профнастила, изготовленного из оцинкованной стали с антикоррозийным полимерным покрытием:
+        .step-list-blockMobile
+            .step-list
+                .step-list__section
+                    .step-list__item.step-list__item_arrows-next.item-elementArrow
+                        .item-elementArrow__after.color-blueThree
+                        .step-list__item-icon: +img('content/step-list/icon/step-list-1', 'png')
+                        .step-list__item-text Вы звоните в нашу компанию и оставляете #[br] заявку на бесплатную консультацию и точный #[br] расчет количества, в котором потребуется #[br] профнастил.
+                .step-list__section
+                    .step-list__item.step-list__item_arrows-next.item-elementArrow
+                        .item-elementArrow__after.color-blueThree
+                        .step-list__item-icon: +img('content/step-list/icon/step-list-2', 'png')
+                        .step-list__item-text Наш мастер выезжает на объект для выполнения замеров и оценки условий #[br] применения профнастила. Проводит профессиональную консультацию по выбору #[br] оптимального материала.
+                .step-list__section
+                    .step-list__item.item-elementArrow.step-list__item_arrows-bottom
+                        .item-elementArrow__after.color-blueThree
+                        .step-list__item-icon: +img('content/step-list/icon/step-list-3', 'png')
+                        .step-list__item-text Наши сметчики рассчитывают количество #[br] профнастила и при необходимости расходы на сопутствующие услуги. Цена фиксируется в #[br] договоре и не подлежит изменению
+            .hidden-md-down
+                br
+                .text-center
+                    button.btn.btn-red.btn-bg СКАЧАТЬ ВЕСЬ КАТАЛОГ ПРОДУКЦИИ
+                br
+            .step-list
+                .step-list__section
+                    .step-list__item.item-elementArrow
+                        .item-elementArrow__after.color-blueThree
+                        .step-list__item-icon: +img('content/step-list/icon/step-list-4', 'png')
+                        .step-list__item-text Вы остаетесь довольны качеством товара и #[br] услуг, рекомендуете нас знакомым, обращаетесь к нам снова и получаете еще более выгодное специальное предложение для постоянных клиентов
+                .step-list__section
+                    .step-list__item.step-list__item_arrows-prev.item-elementArrow
+                        .item-elementArrow__after.color-blueThree
+                        .step-list__item-icon: +img('content/step-list/icon/step-list-5', 'png')
+                        .step-list__item-text При необходимости советуем вам надежную #[br] монтажную бригаду или сами окажем услуги по #[br] монтажу профнастила в Челябинске или #[br] области, предоставив скидку 20%
+                .step-list__section
+                    .step-list__item.step-list__item_arrows-prev.item-elementArrow
+                        .item-elementArrow__after.color-blueThree
+                        .step-list__item-icon: +img('content/step-list/icon/step-list-6', 'png')
+                        .step-list__item-text Вы оплачиваете профнастил по лучшей цене в Челябинске и получаете его в сроки, оговоренные в документах.
+    br
+    br
+    br
+    .reviews-block
+        .container
+            p.reviews-block__title.text-center Отзывы и пожелания
+            .row
+                .col-lg-6
+                    p.reviews-block__title-sub Видео отзывы клиентов:
+                    .reviews-block__video
+                        - for(var i = 1; i<5; i++)
+                            .reviews-block__video-section
+                                .reviews-block__video-item: .reviews-block__video-item-after(style="background-image: url('%=static=%img/content/reviews-block__video/" + i + ".jpg');")
+
+                .col-lg-6
+                    br.hidden-lg-up
+                    .reviews-block__rightBlock
+                        p.reviews-block__title-sub Письма благодарности:
+                        .reviews-block__documents.arrow-default
+                            - for(var i = 1; i<4; i++)
+                                .reviews-block__documents-section
+                                    .reviews-block__documents-item: +img('content/reviews-block__documents/1')
+    .container
+        br
+        br
+        .reviews-list
+            .reviews-list-item
+                p.reviews-list-item-date 14.10.2016  /  12:50
+                p.reviews-list-item-title Павел Владимирович
+                p.reviews-list-item-text Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Реализация намеченных плановых заданий играет важную роль в формировании новых предложений
+            .reviews-list-item
+                p.reviews-list-item-date 14.10.2016  /  12:50
+                p.reviews-list-item-title Павел Владимирович
+                p.reviews-list-item-text Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Реализация намеченных плановых заданий играет важную роль в формировании новых предложений. Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Реализация намеченных плановых заданий играет важную роль в формировании новых предложений
+
+            ul.pagination.not-styleLink
+                li.active: span 1
+                - for(var i = 2; i<6; i++)
+                li: a(href='#'): span= i
+            br
+            button.btn.btn-red.btn-bg Добавить свой отзыв
+    br
+    br
+block script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

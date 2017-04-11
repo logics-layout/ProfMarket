@@ -286,7 +286,7 @@ try{
     ymaps.ready(initYmaps);
 }catch (e){}
 
-$('.tabs__nav').find('a').click(function(e){
+$('.tabs__nav, .tabs-table').find('a').click(function(e){
     e.preventDefault();
     var _this = $(this),
         parent = _this.parent(),
@@ -297,8 +297,7 @@ $('.tabs__nav').find('a').click(function(e){
     if(!parent.hasClass(className)){
         parent.addClass(className);
     }
-    parent.siblings().removeClass(className)
-        .each(function () {
+    parent.siblings().removeClass(className).each(function () {
             var __this = $(this),
                 link = __this.find('a'),
                 block = $(link.attr('data-block'));
@@ -307,7 +306,7 @@ $('.tabs__nav').find('a').click(function(e){
             }
         });
 
-    block.delay(time).fadeIn(time)
+    block.delay(time).fadeIn(time);
 });
 
 $('.category-list__item-btnToggle').click(function (e) {

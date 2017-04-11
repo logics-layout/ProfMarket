@@ -89,6 +89,14 @@ h3, .h3{
   }
 }
 
+.blockquote{
+  &_md{
+    border-left: 2px solid #b43520;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 p {
   margin-bottom: 20px;
 }
@@ -106,12 +114,24 @@ hr{
     &_big{
       margin: 48px 0;
     }
+    &_disposable{
+      margin-bottom: 40px;
+      margin-top: 32px;
+      border-color: #333333;
+    }
   }
 }
 
 ol, ul{
   list-style: none;
   padding: 0;
+  &.list-blue{
+    li {
+      &:after {
+        background-color: #045da6;
+      }
+    }
+  }
   li{
     position: relative;
     padding-left: 22px;
@@ -161,7 +181,6 @@ ul.ul-style{
 
 b{
   font-weight: 700;
-  color: #292a3c;
 }
 
 .tableWrap{
@@ -175,25 +194,25 @@ b{
 
 
 table{
-  font-size: 14px;
   &:not(.not_style_default){
+  //font-size: 14px;
     @extend .table;
     @extend .table-striped;
     @extend .table-bordered;
-  }
-
-  tbody > tr{
-    color: #4b4b4b;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    &:hover, &.active{
-      td{
-        background-color: #f0f1f2;
-        //color: #070707;
+    tbody > tr{
+      color: #4b4b4b;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      &:hover, &.active{
+        td{
+          background-color: #f0f1f2;
+          //color: #070707;
+        }
       }
     }
   }
+
 
   &.table-two{
     thead > tr > th{
