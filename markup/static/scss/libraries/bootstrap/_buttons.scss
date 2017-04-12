@@ -47,10 +47,6 @@
     background-image: url("%=static=%general/bg-btn.png");
   }
 
-  &.btn-border{
-    padding-top: 6.5px;
-    padding-bottom: 6.5px;
-  }
 
   em{
     //font-size: 29px;
@@ -169,7 +165,10 @@ a.btn {
 
 // Button Sizes
 // --------------------------------------------------
-
+.btn-border{
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
+}
 .btn-md {
   font-size: 16px;
   padding-top: 10px;

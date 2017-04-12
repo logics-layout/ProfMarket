@@ -20,6 +20,7 @@ $(window).on({
         // checkHeaderFix();
     },
     resize: function () {
+        checkActiveQuestion();
         // checkHeaderFix();
         checkFooterHeight();
     }
@@ -48,6 +49,14 @@ if ($.fn.slick) {
         arrows: true,
         prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev-index'></i></button>",
         nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next-index'></i></button>",
+    });
+    $('.index-slider-mobile__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev-index-mobile'></i></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next-index-mobile'></i></button>",
     });
 
     $('.slider-inner').slick({
@@ -319,3 +328,38 @@ $('.category-list__item-btnToggle').click(function (e) {
         list.slideDown(300);
     }
 });
+
+var questionList = $('.question .container');
+var questionItem = $('.question__list-item');
+function checkActiveQuestion() {
+    questionItem.each(function(){
+        var _this = $(this),
+            textBlock = _this.next(),
+            buffer = textBlock.next();
+
+        textBlock.css('width', questionList.width()+'px');
+        buffer.css('height', _heightBlock(textBlock)+"px");
+
+        if(_this.hasClass('active')){
+            textBlock.add(buffer).slideDown(300);
+        }else{
+            textBlock.fadeOut(300);
+            buffer.slideUp(300)
+        }
+    });
+}
+
+checkActiveQuestion();
+
+questionItem.click(function (e) {
+    e.preventDefault();
+    var _this = $(this);
+    _this.addClass('active');
+    questionItem.not(_this).removeClass('active');
+    checkActiveQuestion();
+});
+
+var featuresSection = $('');
+function checkHeightFeaturesSection() {
+    
+}

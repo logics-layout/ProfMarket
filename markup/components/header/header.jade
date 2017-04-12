@@ -1,6 +1,41 @@
 mixin header(data)
     .header(class!=data).not-styleLink
-        .header__desktop
+        .header__mobile.hidden-lg-up
+            .header__mobile-nav
+                .header__mobile-nav-section.header__mobile-nav-section_btn
+                    .mobile-list-anim
+                        input(type="checkbox", id="header-bottom-toggleMenuMbl")
+                        label.menuTopMobel(for="header-bottom-toggleMenuMbl")
+                            span.menu-mobile
+                                span.menu-mobile-hamburger.one
+                                span.menu-mobile-hamburger.two
+                                span.menu-mobile-hamburger.three
+
+                .header__mobile-nav-section
+                    a(href="#").header__mobile-logo: +img('assets/header/logo-mobile', 'png')
+                .header__mobile-nav-section.header__mobile-nav-section_btn.text-center
+                    a(href="#").header__mobile-link: +icon('phone')
+                .header__mobile-nav-section.header__mobile-nav-section_btn.text-center
+                    a(href="#").header__mobile-link: +icon('search')
+
+            .header__mobile-modal
+                ul.header__mobile-menu.not-styleLink
+                    li.active: a(href="#") Меню
+                    li: a(href="#") Каталог
+                    li: a(href="#") Услуги
+                    li: a(href="#") О компании
+                    li: a(href="#") Наши объекты
+                    li: a(href="#") Контакты
+                br
+                br
+                .header__mobile-listBtn
+                    .header__mobile-listBtn-section
+                        a(href="#").header__mobile-btn #[i.s-header__mobile-btn-1]ЗАКАЗАТЬ ЗВОНОК
+                    .header__mobile-listBtn-section
+                        a(href="#").header__mobile-btn #[i.s-header__mobile-btn-2]РАСЧЁТ МАТЕРИАЛА
+
+
+        .header__desktop.hidden-md-down
             .header__top
                 .container
                     .header__top-table
@@ -8,22 +43,6 @@ mixin header(data)
                             a(href="#").header__logo: +img('assets/header/logo', 'png')
                         .header__top-table-right
                             .header__nav
-                                .hidden-md-up
-                                    .header__nav-table
-                                        .header__nav-table-cell
-                                            .mobile-list-anim
-                                                input(type="checkbox", id="header-bottom-toggleMenuMbl")
-                                                label.menuTopMobel(for="header-bottom-toggleMenuMbl")
-                                                    span.menu-mobile
-                                                        span.menu-mobile-hamburger.one
-                                                        span.menu-mobile-hamburger.two
-                                                        span.menu-mobile-hamburger.three
-                                        .header__nav-table-cell.text-right
-                                            .header__nav-sectionLink
-                                                span.header__nav-icon: +icon('phone', 'svg-phone', 17, 17)
-                                                a(href="#").header__nav-link.hidden-xs-down +7 (351) 777-47-08
-                                                a(href="#").header__nav-link +7 (351) 238-38-86
-
 
                                 ul.header__nav-list
                                     li: a(href="#").color-white: span.color-white__title Главная страница
@@ -48,7 +67,7 @@ mixin header(data)
                                                     span.link-icon__icon: i.s-date
                                                     span.link-icon__title пн-сб: 09:00 - 19:00
 
-                                            div.hidden-sm-down
+                                            div
                                                 .link-icon
                                                     .link-icon__icon: i.s-phone
                                                     .link-icon__title

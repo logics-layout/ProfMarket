@@ -1,4 +1,121 @@
 .header{
+  &__mobile{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 4px solid #1864b0;
+    z-index: 9;
+    background-color: #fff;
+    .mobile-list-anim {
+      background-color: transparent;
+      color: #4c4c4c;
+
+      .menuTopMobel{
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+    &-nav{
+      display: table;
+      width: 100%;
+      &-section{
+        display: table-cell;
+        vertical-align: middle;
+        +*{
+          border-left: 1px solid #e6e6e6;
+        }
+        &_btn{
+          width: 60px;
+          line-height: 60px;
+        }
+      }
+    }
+    &-link{
+      display: block;
+      svg{
+        display: inline-block;
+        margin-bottom: -4px;
+      }
+    }
+    &-logo{
+      display: block;
+      text-align: center;
+      img{
+        max-width: 80%;
+      }
+    }
+    &-modal{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      max-height: 85vh;
+      overflow: auto;
+      padding: 0 21px;
+      padding-bottom: 21px;
+      display: none;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.18);
+    }
+    &-menu{
+      @include nl;
+      li{
+        display: block;
+        margin: 0 -21px;
+        padding: 0 21px;
+        &.active{
+          background-color: #1c66a8;
+          a{
+            color: #fff;
+            border-top-color: transparent !important;
+          }
+        }
+        a{
+          display: block;
+          color: #333;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 60px;
+          border-top: 1px solid #f4f4f4;
+          &:hover, &:focus{
+            border-color: #f4f4f4;
+          }
+        }
+      }
+    }
+    &-listBtn{
+      font-size: 0;
+      margin: -9px;
+      &-section{
+        display: inline-block;
+        font-size: 14px;
+        padding: 9px;
+        width: 50%;
+      }
+    }
+    &-btn{
+      display: block;
+      text-align: center;
+      border: 1px solid #d83622 !important;
+      border-radius: 4px;
+      color: #d83622;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 10px 0;
+      i{
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -4px;
+        margin-right: 9px;
+      }
+      &_white{
+        border: 1px solid #fff !important;
+        color: #fff;
+      }
+    }
+  }
   &__top{
     background-size: cover;
     background-position: center;

@@ -1,18 +1,328 @@
 extends main
 
 mixin item-two()
-    .itemList
-        -for(var i = 0; i<8;i++)
+    .itemList-3
+        -for(var i = 0; i<9;i++)
+            .itemList-3__section
+                a(href="#").item-three.item-elementArrow.not-styleLink
+                    span.db.item-elementArrow__after.color-blueThree
+                    span.item-three__table
+                        span.item-three__table-row
+                            span.item-three__table-cell.item-three__table-cell_img: +img('content/item-img')
+                            span.item-three__table-cell #[b.color-blue С-8] предназначен для кровли, заборов и простых быстровозводимых сооружений. Универсальный материал с умеренной ценой.
+                        span.item-three__table-row
+                            span.item-three__table-cell.item-three__table-cell_img
+                                span.db.item-three__price от #[b.color-redTwo 210] руб./ м2
+                            span.item-three__table-cell
+                                button.btn.btn-red.btn-bg ПОДРОБНЕЕ
 
 
 block head
     - var headData = {title: "Раздел"}
 
 block content
+    .block-advantages
+        .container
+            p.block-advantages__title.h2.text-center.color-red Купите качественный профнастил на прямую от производителя на 30% #[br.hidden-md-down] дешевле рынка с оперативной доставкой в любую точку Челябинска #[br.hidden-md-down] и области с гарантией до 40 лет
+            .row
+                .col-lg-6
+                    .block-advantages__video: .block-advantages__video-after(style="background-image: url('%=static=%img/content/advantages/video.jpg');")
+                    br.hidden-lg-up
+                .col-lg-6
+                    .block-advantages__list
+                        .block-advantages__list-section
+                            .block-advantages__item
+                                .block-advantages__item-icon: +img('content/advantages/advantages__item-1', 'png')
+                                .block-advantages__item-text Прямые поставки — #[br] качественный профнастил от производителя
+                        .block-advantages__list-section
+                            .block-advantages__item.block-advantages__item_red
+                                .block-advantages__item-icon: +img('content/advantages/advantages__item-2', 'png')
+                                .block-advantages__item-text Профессиональный монтаж профнастила со скидкой 20%, при покупке наших материалов
+                        .block-advantages__list-section
+                            .block-advantages__item.block-advantages__item_red
+                                .block-advantages__item-icon: +img('content/advantages/advantages__item-3', 'png')
+                                .block-advantages__item-text Цена на профнастил фиксируется в договоре и не изменяется
+                        .block-advantages__list-section
+                            .block-advantages__item
+                                .block-advantages__item-icon: +img('content/advantages/advantages__item-4', 'png')
+                                .block-advantages__item-text Быстрая доставка по Челябинской области, гарантия 1 год и пожизненное обслуживание
+                        .block-advantages__list-section
+                            .block-advantages__item
+                                .block-advantages__item-icon: +img('content/advantages/advantages__item-5', 'png')
+                                .block-advantages__item-text Сделаем скидку, если найдете такой же профнастил, цена которого ниже, чем у нас.
+                        .block-advantages__list-section
+                            .block-advantages__item.block-advantages__item_red
+                                .block-advantages__item-icon: +img('content/advantages/advantages__item-6', 'png')
+                                .block-advantages__item-text Экспертная помощь в расчете объема и подборе дополнительных материалов.
     .container
-        .block-bg
+        br
+        blockquote.blockquote_paddingNot
+            p Профнастил стал популярным благодаря своим прекрасным эксплуатационным характеристикам и сравнительной лёгкости. Компания “Профмаркет” уже более 5 лет занимается реализацией профнастила в Челябинске, благодаря чему мы наработали огромный опыт в этой области и можем предложить купить профнастил на одних из самый лучших условиях, а также вы можете получить у нас профессиональную консультацию по выбору и монтажу материала. Выбирая нам Челябинский профнастил, вы будете уверены в его качестве и доступной стоимости материала. Профлист в Челябинске вы можете купить оптом и в роницу, у нас огромный выбор и ассортимент.
 
 
+        .offer.text-center
+            p.offer__textp.offer__text_big(style="margin: 0;padding-top: 20px;") 6 Секретов покупки качественного #[br.hidden-md-down] профнастила о которых Вы не знали
+            .offer__line(style="width: 420px;")
+            p.offer__text.offer__text_big-small(style="margin-bottom: 10px;") или как не переплатить за профнастил
+            button.btn.btn-red.btn-bg.offer__btn Узнать секрет
+        br
+        br
+        br
+        .tabs-table-block
+            ul.tabs-table.not-styleLink
+                li.tabs-table__cell.active: a(href="#", data-block="#tabs-table-1") В начало
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-2") Виды профнастила
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-3") Описание
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-4") Преимущества
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-8") Отзывы
+                li.tabs-table__cell: a(href="#", data-block="#tabs-table-9") Вопросы и ответы
+        br
+        br
+        .tabs-table-content
+            .tabs-table-content__item.active#tabs-table-1
+                blockquote.blockquote_md
+                    p Профнастил стал популярным благодаря своим прекрасным эксплуатационным характеристикам и сравнительной лёгкости. Компания “Профмаркет” уже более 5 лет занимается реализацией профнастила в Челябинске, благодаря чему мы наработали огромный опыт в этой области и можем предложить купить профнастил на одних из самый лучших условиях, а также вы можете получить у нас профессиональную консультацию по выбору и монтажу материала. Выбирая нам Челябинский профнастил, вы будете уверены в его качестве и доступной стоимости материала. Профлист в Челябинске вы можете купить оптом и в роницу, у нас огромный выбор и ассортимент.
+            .tabs-table-content__item#tabs-table-2: p и
+            .tabs-table-content__item#tabs-table-3: p 2
+            .tabs-table-content__item#tabs-table-4: p s
+            .tabs-table-content__item#tabs-table-5: p d
+            .tabs-table-content__item#tabs-table-6: p g
+            .tabs-table-content__item#tabs-table-7: p t
+            .tabs-table-content__item#tabs-table-8: p b
+            .tabs-table-content__item#tabs-table-9: p q
+
+
+        ul.tabs__nav.tabs__nav_two.not-styleLink
+            li.active: a(href="#", data-block="#items1") Для забора
+            li: a(href="#", data-block="#items2") Для кровли
+            li: a(href="#", data-block="#items3") Оцинкованный
+            li: a(href="#", data-block="#items4") Окрашеный
+        br
+        br
+        br
+        .tabs__content
+            .tabs__content-item.active#items1
+                +item-two()
+            .tabs__content-item#items2
+                +item-two()
+            .tabs__content-item#items3
+                +item-two()
+            .tabs__content-item#items4
+                +item-two()
+
+    br
+    br
+    .callback
+        .container
+            p.text-center.callback__title.h2.h2-big.color-blue Уже знаете, сколько потребуется профнастила для реализации ваших планов?
+            p.callback__desc.text-center Оставьте заявку, чтобы наши специалисты бесплатно провели расчеты и выявили точный объем материала. #[br.hidden-md-down] Помните: при ошибках в расчете проект может обойтись на несколько тысяч дороже!
+            .callback__form
+                .callback__form-section
+                    input.form-control(placeholder="Ваше имя")
+                .callback__form-section
+                    input.form-control(placeholder="Ваш телефон")
+                .callback__form-section
+                    button.btn.btn-red.btn-bg.btn-width.btn-md ОСТАВИТЬ ЗАЯВКУ
+    br
+    br
+    .container
+        +item-two()
+
+    br
+    br
+    .index-grey
+        .container
+            p.index-title.text-center.color-red Описание
+            br
+            blockquote.blockquote_md
+                p: b.color-red Профлист в Челябинске.
+                p Профнастил — это оцинкованный лист с профилем, на который нанесено полимерное покрытие. При этом у каждого производителя могут быть совершенно разные покрытия: полиэстер, пластизол или пурал. На сам стальной лист наносится антикоррозийный слой, который сверху покрывается грунтовкой. Затем на лицевую сторону наносится полимерное покрытие, а на внутреннюю — специальный защитный лак.
+
+
+            .row
+                .col-lg-7
+                    table.not_style_default
+                        tr
+                            td(style="width: 30px;").hidden-sm-down
+                            td
+                                p(style="margin-bottom: 10px;"): b.color-red Достоинства профнастила.
+                                p Такой доступный материал, как профнастил, обладает различными достоинствами:
+                                br.hidden-md-down
+                                .row: .col-lg-8
+                                    ul.list-blue
+                                        li: p Универсальностью, которая считается самым важным его преимуществом. Ведь его можно использовать как покрытие кровли, обшивку стен и фасадов, а также для возведения заборов и перегородок и др.
+                                        li: p Легкостью монтажа, так как материал можно уложить при отсутствии специальных инструментов и знайний. Любому человеку, впервые увидевшему профнастил, легко даётся его укладка
+                .col-lg-5.hidden-md-down
+                    br
+                    br
+                    br
+                    +img('content/profnastil-raznovidnosti')
+
+    br
+    br
+    .container
+        .text-center
+            p.color-red.h2.h2-big Сравнение с другими поставщиками профнастила от #[br.hidden-md-down] производителя — 10 очков в нашу пользу
+            p Производственные мощности наших поставщиков позволяют быстро изготавливать в больших объемах профнастил по цене ниже конкурентов, поэтому мы можем удовлетворить потребности заказчика в любой продукции из нашего ассортиментного списка и предложить ему выгодные условия. Мы работаем на совесть: соблюдаем обусловленные договором сроки поставки, осуществляем со скидкой доставку и монтаж кровельных и облицовочных материалов.
+        br
+        .features__table
+            .features__table-cell.features__table-cell_table
+                .features__item.features__item_leaf.features__item_blue.text-center.item-elementArrow
+                    .item-elementArrow__after.color-blueThree
+                    .features__item-head.color-blueThree
+                        .features__item-title: b Как работаем мы
+                        .features__item-head-after: i.s-ok
+                    .features__item-body
+                        .features__item-section.featuresSection: span Наши поставщики - производители профлиста - закупают только качественное сырье на ММК, НМК и других Уральских заводах, производящих надежную продукцию.
+                        .features__item-section.featuresSection: span Устанавливаем на профнастил честные цены, которыениже стоимости товаров многих наших конкурентов.
+                        .features__item-section.featuresSection: span Всегда придерживаемся обусловленных в договоре сроков поставок благодаря прямому сотрудничеству с производителем профлиста.
+                        .features__item-section.featuresSection: span Гарантируем отличное качество продукции сертификатом производителя.
+                        .features__item-section.featuresSection: span Создаем заказчику идеальные условия для выбора нужного ему товара, высылаем образцы продукции.
+                        .features__item-section.featuresSection: span Выполняем доставку по Челябинску и Челябинской области.
+                        .features__item-section.featuresSection: span Мы точно и бесплатно рассчитываем количество материала в соответствии с задачами заказчика.
+                        .features__item-section.featuresSection: span Предлагаем качественный профнастил от производителя для кровельных и фасадных работ, дополнительные услуги, расчет количества материала, доставку, монтажные работы со скидкой
+                        .features__item-section.featuresSection: span Мы входим в пятерку самых крупных и надежных поставщиков кровельных и фасадных материалов в Челябинске, имеем богатый опыт в монтажных работах. Можем выполнить приемку работ, выполненных другим подрядчиком.
+
+            .features__table-cell.features__table-cell_titles
+                .featuresSection_head
+                .features__itemNum
+                    .features__itemNum-section.featuresSection
+                        .features__itemNum-section-content
+                            .features__itemNum-section-after
+                            .features__itemNum-section-title СЫРЬЕ
+                    .features__itemNum-section.featuresSection
+                        .features__itemNum-section-content
+                            .features__itemNum-section-title ЦЕНА
+                    .features__itemNum-section.featuresSection
+                        .features__itemNum-section-content
+                            .features__itemNum-section-after
+                            .features__itemNum-section-title СРОКИ
+                    .features__itemNum-section.featuresSection
+                        .features__itemNum-section-content
+                            .features__itemNum-section-after
+                            .features__itemNum-section-title КАЧЕСТВО
+                    .features__itemNum-section.featuresSection
+                        .features__itemNum-section-content
+                            .features__itemNum-section-after
+                            .features__itemNum-section-title ПОМОЩЬ
+                    .features__itemNum-section.featuresSection
+                        .features__itemNum-section-content
+                            .features__itemNum-section-after
+                            .features__itemNum-section-title ДОСТАВКА
+                    .features__itemNum-section.featuresSection
+                        .features__itemNum-section-content
+                            .features__itemNum-section-after
+                            .features__itemNum-section-title ЧЕСТНОСТЬ
+                    .features__itemNum-section.featuresSection
+                        .features__itemNum-section-content
+                            .features__itemNum-section-after
+                            .features__itemNum-section-title КОМПЛЕКСНЫЕ #[br] УСЛУГИ
+                    .features__itemNum-section.featuresSection
+                        .features__itemNum-section-content
+                            .features__itemNum-section-after
+                            .features__itemNum-section-title ЭКСПЕРТНОСТЬ
+
+
+            .features__table-cell.features__table-cell_table
+                .features__item.features__item_red.text-center.item-elementArrow
+                    .item-elementArrow__after.color-redTwo
+                    .features__item-head.color-redTwo
+                        .features__item-title: b Как работают многие
+                        .features__item-head-after: i.s-not
+                    .features__item-body
+                        .features__item-section.featuresSection: span Производители закупают дешевое сырье, чтобы максимально сэкономить в ущерб качеству.
+                        .features__item-section.featuresSection: span Могут изначально для привлечения покупателей предлагать низкую цену, которая увеличится в разы после точного расчета заказа.
+                        .features__item-section.featuresSection: span Часто срывают сроки, так как приходится тратить время на поиск профлиста в нужном объеме, если заказ масштабный.
+                        .features__item-section.featuresSection: span Возможна реализация неоригинальной продукции низкого качества.
+                        .features__item-section.featuresSection: span Навязывают товар, который необходимо продать, но который не соответствует потребностям заказчика.
+                        .features__item-section.featuresSection: span Доставка осуществляется только по городу или не осуществляется совсем.
+                        .features__item-section.featuresSection: span В погоне за прибылью производят расчет с "запасом" в большую сторону.
+                        .features__item-section.featuresSection: span Часто только реализуют и доставляют товар без комплектующих и сопутствующих услуг.
+                        .features__item-section.featuresSection: span Кратковременное присутствие на рынке и недостаточный опыт не позволяют другим поставщикам консультировать эффективно.
+
+    br
+    br
+    .reviews-block.reviews-block_notLeaf
+        .container
+            p.reviews-block__title.text-center Отзывы и пожелания
+            .row
+                .col-lg-6
+                    p.reviews-block__title-sub Видео отзывы клиентов:
+                    .reviews-block__video
+                        - for(var i = 1; i<5; i++)
+                            .reviews-block__video-section
+                                .reviews-block__video-item: .reviews-block__video-item-after(style="background-image: url('%=static=%img/content/reviews-block__video/" + i + ".jpg');")
+
+                .col-lg-6
+                    br.hidden-lg-up
+                    .reviews-block__rightBlock
+                        p.reviews-block__title-sub Письма благодарности:
+                        .reviews-block__documents.arrow-default
+                            - for(var i = 1; i<4; i++)
+                                .reviews-block__documents-section
+                                    .reviews-block__documents-item: +img('content/reviews-block__documents/1')
+    .container
+        br
+        br
+        .reviews-list
+            .reviews-list-item
+                p.reviews-list-item-date 14.10.2016  /  12:50
+                p.reviews-list-item-title Павел Владимирович
+                p.reviews-list-item-text Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Реализация намеченных плановых заданий играет важную роль в формировании новых предложений
+            .reviews-list-item
+                p.reviews-list-item-date 14.10.2016  /  12:50
+                p.reviews-list-item-title Павел Владимирович
+                p.reviews-list-item-text Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Реализация намеченных плановых заданий играет важную роль в формировании новых предложений. Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Реализация намеченных плановых заданий играет важную роль в формировании новых предложений
+
+            ul.pagination.not-styleLink
+                li.active: span 1
+                - for(var i = 2; i<6; i++)
+                    li: a(href='#'): span= i
+            br
+            button.btn.btn-red.btn-bg Добавить свой отзыв
+    br
+    br
+    .question.question_leaf.question_leaf_right.index-blockColorItem.index-blockColorItem_notShadow
+        .container
+            p.h2.h2-big.color-blueFour.text-center Ответы на часто задаваемые вопросы о профнастиле
+
+            .question__sections
+                .question__sections-section
+                    .question__avtor: +img('content/avtor', 'png')
+                .question__sections-section
+                    p.question__title: b Есть вопросы? Задайте их нашему эксперту
+                    .question__sections.question__sections_lgBlock
+                        .question__sections-section
+                            .question__name: b Дмитрий Семёнов —
+                            .question__text технический директор, опыт работы 12 лет
+                        .question__sections-section
+                            .question__line
+                        .question__sections-section
+                            .question__text Задайте свой вопрос и получите консультацию #[br.hidden-sm-down] по своим проблемам абсолютно бесплатно
+                        .question__sections-section
+                            button.btn.btn-red.btn-notShadow.btn-md.question__btn Задать вопрос
+            br
+            br
+            .question__list.not-styleLink
+                - for(var i = 1; i<7; i++)
+                    if i == 1
+                        - className = 'active'
+                    else
+                        - className = ''
+
+                    .question__list-section
+                        a.question__list-item(class=className, href="#")
+                            span.question__list-item-num 0#{i}
+                            span.question__list-item-text Это пример текста вопроса, создан для примера текста, это пример текста вопроса, создан дял того?
+                        .question__listItemText Стальные листы имеют двойную защиту от коррозии: оцинкование и покрытие полимерным слоем, что делает долговечным кровельный и облицовочный материал; повышает его прочность и устойчивость к механическому воздействию.
+                        .question__listItemText-buffer
+            br
+            br
+            ul.pagination.pagination_white.not-styleLink
+                li.active: span 1
+                - for(var o = 2; o<6; o++)
+                    li: a(href='#'): span= o
+    br
     br
     br
 block script

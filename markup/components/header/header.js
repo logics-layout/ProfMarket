@@ -14,7 +14,7 @@ var _fnMenuHeaderTop = function(toggle, list, slide) {
 };
 
 var menuHeaderTopToggle = $('#header-bottom-toggleMenuMbl');
-var menuHeaderTopList = $('.header__nav-list');
+var menuHeaderTopList = $('.header__mobile-modal');
 
 menuHeaderTopToggle.change(function() {_fnMenuHeaderTop(menuHeaderTopToggle, menuHeaderTopList, true);});
 _fnMenuHeaderTop(menuHeaderTopToggle, menuHeaderTopList, true);

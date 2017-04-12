@@ -56,6 +56,17 @@ blockquote{
   margin-bottom: 45px;
   font-size: inherit;
 }
+.blockquote{
+  &_md{
+    border-left: 2px solid #b43520;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &_paddingNot{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 
 h1, .h1{
   margin-bottom: 30px;
@@ -89,13 +100,6 @@ h3, .h3{
   }
 }
 
-.blockquote{
-  &_md{
-    border-left: 2px solid #b43520;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
 
 p {
   margin-bottom: 20px;
@@ -290,6 +294,32 @@ table{
         display: inline-block;
         border-bottom: 1px solid rgba(24, 100, 169, 0.6);
         line-height: 16px;
+      }
+    }
+  }
+  &_white{
+    li {
+      &.active{
+        >*{
+          background-color: #fff;
+          color: #045da6;
+        }
+      }
+      &:not(.active){
+        >*{
+          &:hover{
+            background-color: rgba(255, 255, 255, 0.1);
+            >span{
+              border-bottom-color: transparent;
+            }
+          }
+        }
+      }
+      > * {
+        color: #fff;
+        > span {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        }
       }
     }
   }
@@ -560,6 +590,38 @@ table{
         a {
           padding: 21px 47px;
           border-radius: 30px;
+        }
+      }
+    }
+    &_two{
+      margin: -6px -15px;
+      li{
+        padding: 6px 15px;
+        a{
+          border: 1px solid #dadada;
+          font-weight: 400;
+          &:hover, &:focus{
+            background-color: #dadada;
+            border-color: #dadada;
+          }
+        }
+        &.active {
+          a {
+            background-color: #dadada;
+            position: relative;
+            color: #3a3a3a;
+            @include my-media-query(min, map_get($grid-breakpoints, md)) {
+              &:after{
+                content: '';
+                display: block;
+                @include triangle('down', #dadada, 23px, 12px);
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -11px;
+              }
+            }
+          }
         }
       }
     }

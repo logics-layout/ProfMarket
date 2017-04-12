@@ -415,9 +415,52 @@ block content
             ul.pagination.not-styleLink
                 li.active: span 1
                 - for(var i = 2; i<6; i++)
-                li: a(href='#'): span= i
+                    li: a(href='#'): span= i
             br
             button.btn.btn-red.btn-bg Добавить свой отзыв
+    br
+    br
+    .question.question_leaf.index-blockColorItem.index-blockColorItem_notShadow
+        .container
+            p.h2.h2-big.color-blueFour.text-center Ответы на часто задаваемые вопросы о профнастиле
+
+            .question__sections
+                .question__sections-section
+                    .question__avtor: +img('content/avtor', 'png')
+                .question__sections-section
+                    p.question__title: b Есть вопросы? Задайте их нашему эксперту
+                    .question__sections.question__sections_lgBlock
+                        .question__sections-section
+                            .question__name: b Дмитрий Семёнов —
+                            .question__text технический директор, опыт работы 12 лет
+                        .question__sections-section
+                            .question__line
+                        .question__sections-section
+                            .question__text Задайте свой вопрос и получите консультацию #[br.hidden-sm-down] по своим проблемам абсолютно бесплатно
+                        .question__sections-section
+                            button.btn.btn-red.btn-notShadow.btn-md.question__btn Задать вопрос
+            br
+            br
+            .question__list.not-styleLink
+                - for(var i = 1; i<7; i++)
+                    if i == 1
+                        - className = 'active'
+                    else
+                        - className = ''
+
+                    .question__list-section
+                        a.question__list-item(class=className, href="#")
+                            span.question__list-item-num 0#{i}
+                            span.question__list-item-text Это пример текста вопроса, создан для примера текста, это пример текста вопроса, создан дял того?
+                        .question__listItemText Стальные листы имеют двойную защиту от коррозии: оцинкование и покрытие полимерным слоем, что делает долговечным кровельный и облицовочный материал; повышает его прочность и устойчивость к механическому воздействию.
+                        .question__listItemText-buffer
+            br
+            br
+            ul.pagination.pagination_white.not-styleLink
+                li.active: span 1
+                - for(var o = 2; o<6; o++)
+                    li: a(href='#'): span= o
+    br
     br
     br
 block script

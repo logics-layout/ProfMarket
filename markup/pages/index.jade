@@ -8,32 +8,58 @@ block head
     - var index = 'header_index'
 
 block content
-    br
-    .container
-        .row
-            .col-xl-3.col-lg-4.hidden-md-down
-                .index-banner(style="background-image: url('%=static=%img/content/banner-index-bg.png');").not-styleLink.text-right
-                    .dib.index-banner__content.text-left
-                        p.index-banner__title Текст баннера
-                        p.index-banner__text Это пример текста баннера
-                        a(href="#").index-banner__btn.btn.btn-blue ПОДРОБНЕЕ
-                .index-banner(style="background-image: url('%=static=%img/content/index-banner-bg_2.png');").not-styleLink.text-right
-                    .dib.index-banner__content.text-left
-                        p.index-banner__title Текст баннера
-                        p.index-banner__text Это пример текста баннера
-                        a(href="#").index-banner__btn.btn.btn-blue ПОДРОБНЕЕ
+    .hidden-lg-up
+        .index-slider-mobile
+            .container
+                .index-slider-mobile__slider
+                    .index-slider-mobile__slider-section.text-center
+                        p.index-slider-mobile__slider-title НАЗВАНИЕ БАННЕРА
+                        p.index-slider-mobile__slider-text Наша компания строительных материалов может предложить Вам купить продукцию на лучших условиях по оптовым и розничным ценам!
+                    .index-slider-mobile__slider-section.text-center
+                        p.index-slider-mobile__slider-title НАЗВАНИЕ БАННЕРА
+                        p.index-slider-mobile__slider-text Наша компания строительных материалов может предложить Вам купить продукцию на лучших условиях по оптовым и розничным ценам!
+                    .index-slider-mobile__slider-section.text-center
+                        p.index-slider-mobile__slider-title НАЗВАНИЕ БАННЕРА
+                        p.index-slider-mobile__slider-text Наша компания строительных материалов может предложить Вам купить продукцию на лучших условиях по оптовым и розничным ценам!
+                br
+                .text-center
+                    a(href="#").index-slider-mobile__link.not-styleLink.color-white: b.color-white__title +7 (351) 777-47-08
+                    a(href="#").index-slider-mobile__link.not-styleLink.color-white: b.color-white__title +7 (351) 238-38-86
+                br
+                br
+                .header__mobile-listBtn
+                    .header__mobile-listBtn-section
+                        a(href="#").header__mobile-btn.header__mobile-btn_white #[i.s-header__mobile-btn-3]ЗАКАЗАТЬ ЗВОНОК
+                    .header__mobile-listBtn-section
+                        a(href="#").header__mobile-btn.header__mobile-btn_white #[i.s-header__mobile-btn-4]РАСЧЁТ МАТЕРИАЛА
 
-            .col-xl-9.col-lg-8
-                .index-slider.not-styleLink
-                    -for(var i = 0; i<3;i++)
-                        .index-slider__section
-                            .index-slider__table
-                                .index-slider__table-cell.index-slider__table-cell_img.hidden-sm-down
-                                    +img('content/index-slider/master', 'png')
-                                .index-slider__table-cell
-                                    p.index-slider__title Кровельные материалы
-                                    p.index-slider__text Наша компания строительных материалов может предложить Вам купить продукцию на лучших условиях по оптовым и розничным ценам!
-                                    a(href="#").btn.btn-red.btn-bg ПОДРОБНЕЕ
+    .container
+        .hidden-md-down
+            br
+            .row
+                .col-xl-3.col-lg-4.hidden-md-down
+                    .index-banner(style="background-image: url('%=static=%img/content/banner-index-bg.png');").not-styleLink.text-right
+                        .dib.index-banner__content.text-left
+                            p.index-banner__title Текст баннера
+                            p.index-banner__text Это пример текста баннера
+                            a(href="#").index-banner__btn.btn.btn-blue ПОДРОБНЕЕ
+                    .index-banner(style="background-image: url('%=static=%img/content/index-banner-bg_2.png');").not-styleLink.text-right
+                        .dib.index-banner__content.text-left
+                            p.index-banner__title Текст баннера
+                            p.index-banner__text Это пример текста баннера
+                            a(href="#").index-banner__btn.btn.btn-blue ПОДРОБНЕЕ
+
+                .col-xl-9.col-lg-8
+                    .index-slider.not-styleLink
+                        -for(var i = 0; i<3;i++)
+                            .index-slider__section
+                                .index-slider__table
+                                    .index-slider__table-cell.index-slider__table-cell_img.hidden-sm-down
+                                        +img('content/index-slider/master', 'png')
+                                    .index-slider__table-cell
+                                        p.index-slider__title Кровельные материалы
+                                        p.index-slider__text Наша компания строительных материалов может предложить Вам купить продукцию на лучших условиях по оптовым и розничным ценам!
+                                        a(href="#").btn.btn-red.btn-bg ПОДРОБНЕЕ
 
 
         br

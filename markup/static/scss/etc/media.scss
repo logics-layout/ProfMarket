@@ -59,6 +59,18 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+  .features {
+    &__table {
+      &-cell {
+        &_table {
+          width: 380px;
+        }
+      }
+    }
+  }
+  .featuresSection{
+    height: 170px;
+  }
   .step-list__item-icon {
     width: 100px;
     padding: 0 15px;
@@ -129,6 +141,104 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .header {
+    height: 60px;
+  }
+  .features {
+    &__table {
+      display: block;
+      font-size: 0;
+      position: relative;
+      &-cell {
+        font-size: 14px;
+        display: inline-block;
+        &:last-child{
+
+        }
+        &_table {
+          width: 50%;
+        }
+        &_titles{
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          width: 200px;
+          z-index: 1;
+          padding-top: 0 !important;
+          //pointer-events: none;
+        }
+      }
+    }
+    &__itemNum {
+      &-section {
+        &:after {
+          display: none;
+        }
+        &-content {
+          font-size: 11px;
+          line-height: 12px;
+          left: 50%;
+          top: 5px;
+          transform: translateX(-50%);
+          &:before {
+            font-size: 17px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .callback {
+    &__form {
+      margin: 0 -10px;
+      &-section {
+        padding: 0 10px;
+        &:after{
+          display: none !important;
+        }
+      }
+    }
+  }
+  .itemList-3{
+    &__section{
+      width: 50%;
+    }
+  }
+  .block-advantages {
+    &__video {
+      margin-right: 0;
+    }
+  }
+  .question{
+    &__sections{
+      &_lgBlock{
+        display: block;
+        >.question__sections-section{
+          display: block;
+        }
+      }
+    }
+    &__line{
+      height: 1px;
+      width: 100%;
+      border-top: 1px dashed rgba(255, 255, 255, 0.5);
+      background-color: transparent;
+      margin: 10px 0;
+    }
+    &__title {
+      margin-bottom: 15px;
+    }
+    &_leaf{
+      &:before{
+        display: none;
+      }
+    }
+  }
   .step-list {
     display: initial;
     margin: 0;
@@ -366,9 +476,40 @@ body, html{
   .header__nav-list{
     display: table !important;
   }
+  .offer {
+    &__text {
+      &_big{
+        font-size: 27px;
+        line-height: 37px;
+      }
+      &_big-small{
+        font-size: 24px;
+      }
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+  .features__item{
+    &_leaf {
+      &:after{
+        content: '';
+        display: block;
+        @include bg($features__table-cell_leaf);
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        z-index: 2;
+        margin-top: -35px;
+        margin-right: -38px;
+      }
+    }
+  }
+
+  .block-advantages__title{
+    font-size: 30px;
+    line-height: normal;
+  }
   .step-list {
     &__item {
       &_arrows{
@@ -437,6 +578,86 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .featuresSection_head {
+    height: 49px;
+  }
+  .features {
+    &__table {
+      display: block;
+      margin: 0 -15px;
+      width: initial;
+      &-cell {
+        &_table {
+        }
+      }
+    }
+    &__item{
+      padding-top: 5px;
+      font-size: 13px;
+      line-height: 20px;
+      &-section {
+        padding: 15px 10px;
+      }
+      .item-elementArrow__after:after {
+        border-left: 170px solid transparent;
+        border-right: 170px solid transparent;
+        border-top: 10px solid;
+      }
+      &-head{
+        padding: 12px 0;
+        &-after{
+          display: none;
+        }
+      }
+      &-title{
+        font-size: 15px;
+      }
+    }
+  }
+
+  .callback {
+    &__form {
+      margin: -10px 0;
+      &-section {
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+    .form-control{
+      text-align: center;
+    }
+  }
+
+  .tabs {
+    &__nav {
+      &_two {
+        margin: -6px;
+        li {
+          padding: 6px;
+        }
+      }
+    }
+  }
+  .itemList-3{
+    margin: -10px;
+    &__section{
+      padding: 10px;
+    }
+  }
+  .question__sections{
+    display: block;
+    text-align: center;
+    >.question__sections-section{
+      display: block;
+    }
+  }
+  .question {
+    &__list {
+      &-section {
+        width: 100%;
+      }
+    }
+  }
   .step-list {
     &__section {
       width: 100%;
@@ -458,11 +679,6 @@ body, html{
     }
   }
 
-  .mobile-list-anim{
-    width: 70px;
-    vertical-align: middle;
-    display: inline-block;
-  }
   .header__nav{
     background-color: #034884;
     padding-right: 15px;
@@ -669,6 +885,11 @@ body, html{
       }
     }
   }
+  .block-advantages {
+    &:after {
+      display: none;
+    }
+  }
 }
 
 @include my-media-query(max, 600px) {
@@ -707,6 +928,57 @@ body, html{
   }
 }
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .header {
+    &__mobile{
+      &-modal {
+        padding: 0 13px;
+        padding-bottom: 13px;
+      }
+      &-menu {
+        margin: 0 -13px;
+        padding: 0 13px;
+      }
+    }
+  }
+  .header {
+    &__mobile {
+      &-nav {
+        &-section {
+          &_btn {
+            width: 50px;
+            line-height: 50px;
+          }
+        }
+      }
+    }
+  }
+  .itemList-3__section {
+    width: 50%;
+  }
+  .features__item-section{
+    padding-top: 50px;
+  }
+  .features {
+    &__itemNum {
+      &-section{
+        overflow: visible;
+        &-content {
+          top: -8px;
+        }
+      }
+    }
+  }
+
+  .featuresSection{
+    height: 285px;
+  }
+  .block-advantages {
+    &__list {
+      &-section {
+        width: 100%;
+      }
+    }
+  }
   .tabs-table{
     &__cell{
       width: 50%;
